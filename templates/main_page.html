@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Recipes</title>
+<h1>Recipes</h1>
+<table style="border-collapse: collapse; width: 100%;">
+  <tbody>
+    <tr>
+    {% for card_category in cards %}
+    <td colspan="2" style="text-align: center;">
+      <h3>{{ card_category }}</h3>
+    </td>
+    {% endfor %}
+    
+    {% for i in range(5) %}
+    <tr>
+    {% for card_category in cards %}
+      {% for i in range(2) %}
+        <td style="text-align: center;">
+          {% if cards[card_category].__len__() > 0 %}
+            {% set card = cards[card_category].popitem() %}
+            {{ card[0] }}<br>
+            <a href="{{ card[1]['url'] }}"><img src="{{ card[1]['png_url'] }}" alt="wood" style="width:64px;height:64px;"></a>
+            {% endif %}
+        </td>
+      {% endfor %}
+    {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
