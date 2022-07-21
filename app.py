@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
+from src.game_info import get_cards, get_categories_names
 
 app = Flask(__name__)
 
@@ -6,27 +7,21 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/recipes')
 def main_page():
-    categories = {
-        'Resources': [
-            'Wood', 'Stone', 'Bone'
-        ],
-        'Enemies': [
-            'Wolf'
-        ]
-    }
-    cards = {}
-    for category in categories:
-        cards[category] = {}
-        for card in categories[category]:
-            card_url = card.lower().replace(' ', '_')
-            card_png_url = url_for('static', filename=card_url + '.png')
-            cards[category][card] = {
-                'url': card_url,
-                'png_url': card_png_url
-            }
-    return render_template('main_page.html', cards=cards)
+    cards = get_cards()
+    cards_by_category = {}
+    for category in get_categories_names():
+        cards_by_category[category]: list = []
+        for card in cards:
+            if cards[card]['category'] == category:
+                cards_by_category[category].append(cards[card])
+    return render_template('main_page.jinja', cards=cards_by_category)
 
 
 @app.route('/recipes/<name>')
 def recipes(name=None):
-    return render_template('hello.html', name=name)
+    cards = get_cards()
+    return render_template('card_templ.jinja', card=cards[name])
+
+
+if __name__ == '__main__':
+    main_page()

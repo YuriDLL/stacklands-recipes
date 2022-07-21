@@ -1,0 +1,31 @@
+<!doctype html>
+<style>
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<title>Recipes</title>
+<h1>Recipes</h1>
+<table class="table">
+  <tbody>
+    <tr>
+    {% for card_category in cards %}
+    <td style="text-align: center;">
+      <h3>{{ card_category }}</h3>
+    </td>
+    {% endfor %}
+    
+    <tr>
+    {% for card_category in cards %}
+        <td style="text-align: center;">
+            {% for card in cards[card_category] %}
+              <div style="float: left;">
+                <a href="{{ card['url'] }}"> {{ card['name'] }} <br> <img src="{{ card['png_url'] }}" alt="wood" style="width:64px;height:64px;"></a>
+              </div>
+            {% endfor %}
+        </td>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
