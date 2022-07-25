@@ -3,8 +3,45 @@
   table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  text-align: center;
 }
 </style>
 <title>{{ card['name'] }}</title>
 <h1>{{ card['name'] }}</h1>
 <img src="{{ card['png_url'] }}" style="width:256px;height:256px;">
+
+<h1>Create form:</h1>
+<table class="table">
+  <tbody>
+  {% for recepie in create_recipes %}
+    <tr>
+    <td>
+    {% for card in recepie['inputs'] %}
+      <div style="float: left;">
+        <a href={{ card['url'] }}> {{ card['name'] }} <br> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;"></a>
+      </div>
+      <div style="float: left;">
+        <h1>x{{card['count']}}</h1>
+      </div>
+    {% endfor %}
+    </td>
+    <td>
+      <img src={{ url_for('static', filename='arrow.png') }} style="width:64px;height:64px;"> {{recepie['time']}} sec
+    </td>
+    <td>
+    {% for card in recepie['outputs'] %}
+      <div style="float: left;">
+        <a href="{{ card['url'] }}"> {{ card['name'] }} <br> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;"></a>
+      </div>
+      <div style="float: left;">
+        <h1>x{{card['count']}}</h1>
+      </div>
+    {% endfor %}
+    </td>
+    <td>
+      <h3>{{recepie['place']}}</h3>
+    </td>
+    <tr>
+  {% endfor %}
+  </tbody>
+</table>

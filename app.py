@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from src.game_info import get_cards, get_categories_names
+from src.game_info import get_cards, get_categories_names, get_recipes
 
 app = Flask(__name__)
 
@@ -20,7 +20,12 @@ def main_page():
 @app.route('/recipes/<name>')
 def recipes(name=None):
     cards = get_cards()
-    return render_template('card_templ.jinja', card=cards[name])
+    create_recipes = get_recipes(output=name)
+    return render_template(
+        'card_templ.jinja',
+        card=cards[name],
+        create_recipes=create_recipes
+    )
 
 
 if __name__ == '__main__':
