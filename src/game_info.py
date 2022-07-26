@@ -1,3 +1,4 @@
+import csv
 from enum import Enum, auto
 from dataclasses import dataclass
 from typing import Dict, List
@@ -46,7 +47,19 @@ def get_categories_names() -> List[str]:
 
 
 def get_cards() -> Dict[str, dict]:
-    return {
+    cards: dict = {}
+    with open('data/boosters.csv', 'r') as csv_file:
+        boosters = csv.DictReader(csv_file)
+        for booster in boosters:
+            card_url_name = _get_url_name(booster['name'])
+            cards |= {
+                card_url_name: booster | {
+                    'category': 'Boosters',
+                    'url': '/recipes/'+card_url_name,
+                    'png_url': url_for('static', filename=booster['image_name'] + '.png')
+                    }
+            }
+    return cards | {
         _get_url_name(card): _card_info(card)
         for card in cards_tem
     }

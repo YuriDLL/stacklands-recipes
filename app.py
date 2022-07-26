@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from src.game_info import get_cards, get_categories_names, get_recipes
+from src.game_info import get_cards, get_recipes
 
 app = Flask(__name__)
 
@@ -9,11 +9,12 @@ app = Flask(__name__)
 def main_page():
     cards = get_cards()
     cards_by_category = {}
-    for category in get_categories_names():
-        cards_by_category[category]: list = []
-        for card in cards:
-            if cards[card]['category'] == category:
-                cards_by_category[category].append(cards[card])
+    for card in cards:
+        category = cards[card]['category']
+        if category in cards_by_category:
+            cards_by_category[category].append(cards[card])
+        else:
+            cards_by_category[category] = [cards[card]]
     return render_template('main_page.jinja', cards=cards_by_category)
 
 
