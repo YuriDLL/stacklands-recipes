@@ -18,28 +18,30 @@ class Cards:
 
     def _prepare_cards(self) -> None:
         self.cards: Dict[str, Dict[str, Any]] = {}
-        with open('data/boosters.csv', 'r') as csv_file:
-            boosters = csv.DictReader(csv_file)
-            for card in boosters:
-                name_key = self._get_url_name(card['name'])
-                self.cards[name_key] = card
-                self.cards[name_key]['category'] = 'Boosters'
-                self.cards[name_key]['url'] = '/recipes/'+name_key
-                self.cards[name_key]['png_url'] = url_for(
-                    'static',
-                    filename=f"img/{card['image_name']}.png"
-                )
-        with open('data/resources.csv', 'r') as csv_file:
+        self._load_csv('Boosters', image_spec=True)
+        self._load_csv('Mobs', image_spec=False)
+        self._load_csv('Resources', image_spec=False)
+        self._load_csv('Structures', image_spec=False)
+
+    def _load_csv(self, category_name: str, image_spec: bool) -> None:
+        with open(f'data/{category_name.lower()}.csv', 'r') as csv_file:
             resources = csv.DictReader(csv_file)
             for card in resources:
                 name_key = self._get_url_name(card['name'])
                 self.cards[name_key] = card
-                self.cards[name_key]['category'] = 'Resources'
+                self.cards[name_key]['category'] = category_name
                 self.cards[name_key]['url'] = f'/recipes/{name_key}'
-                self.cards[name_key]['png_url'] = url_for(
-                    'static',
-                    filename=f'img/{name_key}.png'
-                )
+                if image_spec:
+                    img_name = self.cards[name_key].pop('image_name')
+                    self.cards[name_key]['png_url'] = url_for(
+                        'static',
+                        filename=f"img/{img_name}.png"
+                    )
+                else:
+                    self.cards[name_key]['png_url'] = url_for(
+                        'static',
+                        filename=f'img/{name_key}.png'
+                    )
 
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
