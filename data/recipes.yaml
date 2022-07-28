@@ -1,0 +1,21 @@
+-
+  inp: {villager: 1, wood: 1}
+  out: {stick: 1}
+  time: 10
+-
+  inp: {coin: 1, wood: 2}
+  out: {coin_chest: 1}
+-
+  inp: {villager: 1, stone: 1, wood: 2}
+  out: {house: 1}
+-
+  inp: {house: 1, villager: 2}
+  out: {baby: 1}
+-
+  inp:
+    plank: 5
+    brick: 5
+    iron_bar: 3
+    villager: 3
+  out: {temple: 1}
+

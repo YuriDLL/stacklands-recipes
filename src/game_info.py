@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List
 
 from flask import url_for
-
+from ruamel.yaml import YAML
 
 class Cards:
 
@@ -56,10 +56,10 @@ class Recipe:
 
     def to_dict(self, cards: Cards) -> Dict:
         return {
-            'inputs': [cards.get_card(card) | {'count': count}
-                       for card, count in self.inputs.items()],
-            'outputs': [cards.get_card(card) | {'count': count}
-                        for card, count in self.outputs.items()],
+            'inp': [cards.get_card(card) | {'count': count}
+                    for card, count in self.inputs.items()],
+            'out': [cards.get_card(card) | {'count': count}
+                    for card, count in self.outputs.items()],
             'time': self.time,
             'place': self.place
         }
@@ -69,24 +69,28 @@ def get_recipes(
         cards: Cards,
         input: str = None,
         output: str = None) -> List[dict]:
-    if input:
-        recipes = [recipe.to_dict(cards) for recipe in recipes_list
-                   if input in recipe.inputs]
-    elif output:
-        recipes = [recipe.to_dict(cards) for recipe in recipes_list
-                   if output in recipe.outputs]
-    return recipes
+    with open('data/recipes.yaml', 'r') as file:
+        recipes = YAML().load(file)
+        if input:
+            find_key = 'inp'
+            value = input
+        elif output:
+            find_key = 'out'
+            value = output
+        else:
+            return []
+        recipes = [_fill_recipe_cards(recipe, cards) for recipe in recipes
+                   if value in recipe[find_key]]
+        return recipes
 
 
-recipes_list = [
-    Recipe(
-        inputs={'stone': 1, 'wood': 2},
-        outputs={'stick': 1},
-        time=30,
-        place='Desk'),
-    Recipe(
-        inputs={'wood': 3},
-        outputs={'stick': 2},
-        time=10,
-        place='Desk')
-]
+def _fill_recipe_cards(recipe: dict, cards: Cards) -> dict:
+    recipe.items
+    return {
+        'inputs': [cards.get_card(card) | {'count': count}
+                   for card, count in recipe['inp'].items()],
+        'outputs': [cards.get_card(card) | {'count': count}
+                    for card, count in recipe['out'].items()],
+        'time': recipe['time'] if 'time' in recipe else None,
+        'place': recipe['place'] if 'place' in recipe else 'Desk'
+    }
