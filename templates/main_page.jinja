@@ -20,7 +20,7 @@
     {% for card_category in cards %}
         <td style="text-align: center;">
             {% for card in cards[card_category] %}
-              <div style="float: left;">
+              <div style="float: left; margin: 0 10px">
                 <a href="{{ card['url'] }}"> {{ card['name'] }} <br> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;"></a>
               </div>
             {% endfor %}

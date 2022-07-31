@@ -5,6 +5,7 @@ from typing import Any, Dict, List
 from flask import url_for
 from ruamel.yaml import YAML
 
+
 class Cards:
 
     def __init__(self) -> None:
@@ -22,6 +23,8 @@ class Cards:
         self._load_csv('Mobs', image_spec=False)
         self._load_csv('Resources', image_spec=False)
         self._load_csv('Structures', image_spec=False)
+        self._load_csv('Food', image_spec=False)
+        self._load_csv('Locations', image_spec=False)
 
     def _load_csv(self, category_name: str, image_spec: bool) -> None:
         with open(f'data/{category_name.lower()}.csv', 'r') as csv_file:

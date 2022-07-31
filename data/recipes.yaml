@@ -18,4 +18,102 @@
     iron_bar: 3
     villager: 3
   out: {temple: 1}
+-
+  inp: {soil: 1, brick: 2, plank: 2, villager: 1}
+  out: {farm: 1}
+-
+  inp: {stone: 1, iron_bar: 1, villager: 1}
+  out: {warehous: 1}
+-
+  inp: {brick: 1, iron_bar: 1, flint: 1, villager: 1}
+  out: {stove: 1}
 
+# travelling_cart 1 item
+
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {map: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {bone: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {frittata: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {soil: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {plank: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {brick: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {old_tome: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {golden_goblet: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {treasure_chest: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {key: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {apple: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {spear: 1}
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {iron_bar: 1}
+
+# treasure_chest 3 item
+
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {carrot: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {map: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {iron_bar: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {apple: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {onion: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {milk: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {berry: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {brick: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {coin: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {spear: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {stone: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {stick: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {flint: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {egg: 1}
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {iron_ore: 1}
