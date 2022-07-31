@@ -1,32 +1,191 @@
 -
-  inp: {villager: 1, wood: 1}
-  out: {stick: 1}
-  time: 10
+  inp: {plank: 2, wood: 2, iron_bar: 1, villager: 1}
+  out: {animal_pen: 1}
+-
+  inp: {glass: 2, iron_bar: 1, villager: 1}
+  out: {aquarium: 1}
+-
+  inp: {distillery: 1, cane_sugar: 1, bottle_of_water: 1}
+  out: {bottle_of_rum: 1}
+-
+  inp: {stone: 3, villager: 1}
+  out: {brick: 1}
+-
+  inp: {brick: 1, iron_bar: 1, wood: 1, villager: 1}
+  out: {brickyard: 1}
+-
+  inp: {stick: 1, flint: 1}
+  out: {campfire: 1}
+-
+  inp:
+    gold_bar: 5
+    glass: 5
+    brick: 5
+    plank: 5
+    villager: 5
+  out: {cathedral: 1}
+-
+  inp: {lime: 1, raw_fish: 1}
+  out: {ceviche: 1}
+-
+  inp: {campfire: 1, wood: 1}
+  out: {charcoal: 1}
+-
+  inp: {chicken: 1, egg: 1}
+  out: {chicken: 1}
+-
+  inp: {smelter: 1, gold_bar: 1, wood: 1}
+  out: {coin: 1}
 -
   inp: {coin: 1, wood: 2}
   out: {coin_chest: 1}
 -
-  inp: {villager: 1, stone: 1, wood: 2}
-  out: {house: 1}
+  inp: {poop: 2, plank: 1, brick: 1, villager: 1}
+  out: {composter: 1}
 -
-  inp: {house: 1, villager: 2}
-  out: {baby: 1}
+  inp: {campfire: 1, raw_meat: 1}
+  out: {cooked_meat: 1}
 -
-  inp:
-    plank: 5
-    brick: 5
-    iron_bar: 3
-    villager: 3
-  out: {temple: 1}
+  inp: {stove: 1, iron_bar: 1, plank: 1, villager: 1}
+  out: {distillery: 1}
+-
+  inp: {campfire: 1, glass: 2}
+  out: {empty_bottle: 1}
+-
+  inp: {cotton: 4, villager: 1}
+  out: {fabric: 1}
 -
   inp: {soil: 1, brick: 2, plank: 2, villager: 1}
   out: {farm: 1}
 -
-  inp: {stone: 1, iron_bar: 1, villager: 1}
-  out: {warehous: 1}
+  inp: {fishing_spot: 1, stone: 1, rope: 1}
+  out: {fish_trap: 1}
+-
+  inp: {stick: 1, rope: 1}
+  out: {fish_rod: 1}
+-
+  inp: {plank: 10, sail: 3, villager: 2}
+  out: {frigate: 1}
+-
+  inp: {campfire: 1, egg: 1, potato: 1}
+  out: {frittata: 1}
+-
+  inp: {apple: 1, berry: 1}
+  out: {fruit_salad: 1}
+-
+  inp: {soil: 1, stone: 2, wood: 2, villager: 1}
+  out: {garden: 1}
+-
+  inp: {smelter: 1, wood: 1, sand: 1}
+  out: {glass: 1}
+-
+  inp: {smelter: 1, wood: 1, gold_ore: 1}
+  out: {gold_bar: 1}
+-
+  inp: {flint: 1, gold_ore: 1, wood: 1, stone: 1, villager: 1}
+  out: {gold_mine: 1}
+-
+  inp: {iron_bar: 2, glass: 2, soil: 1, villager: 1}
+  out: {greenhouse: 1}
+-
+  inp: {berry: 1, soil: 1}
+  out: {berry_bush: 1}
+-
+  inp: {wood: 2, stone: 1, villager: 1}
+  out: {house: 1}
+-
+  inp: {smelter: 1, wood: 1, iron_ore: 1}
+  out: {iron_bar: 1}
+-
+  inp: {flint: 2, wood: 1, stone: 1, villager: 1}
+  out: {iron_mine: 1}
+-
+  inp: {wood: 3, stone: 1, villager: 1}
+  out: {lumber_camp: 1}
+-
+  inp: {brick: 1, plank: 1, coin: 3, villager: 1}
+  out: {market: 1}
+-
+  inp: {plank: 1, iron_bar: 1, campfire: 1}
+  out: {mess_hall: 1}
+-
+  inp: {milk: 1, berry: 1}
+  out: {milkshake: 1}
+-
+  inp: {house: 1, villager: 2}
+  out: {baby: 1}
+-
+  inp: {campfire: 1, egg: 2}
+  out: {omelette: 1}
+-
+  inp: {wood: 3, villager: 1}
+  out: {plank: 1}
+-
+  inp: {stone: 3, wood: 1, villager: 1}
+  out: {quarry: 1}
+-
+  inp: {cotton: 2, villager: 1}
+  out: {rope: 1}
+-
+  inp: {plank: 1, iron_bar: 1}
+  out: {rowboat: 1}
+-
+  inp: {smelter: 1, gold_bar: 3, glass: 3}
+  out: {sacred_key: 1}
+-
+  inp: {fabric: 1, rope: 1, villager: 1}
+  out: {sail: 1}
+-
+  inp: {villager: 1, sand: 1, flint: 1, wood: 1}
+  out: {sand_quarry: 1}
+-
+  inp: {sand: 2, villager: 1}
+  out: {sandstone: 1}
+-
+  inp: {plank: 1, wood: 1, stone: 1, iron_bar: 1, villager: 1}
+  out: {sawmill: 1}
+-
+  inp: {campfire: 1, raw_crab_meat: 1, raw_fish: 1, chili_pepper: 1}
+  out: {seafood_stew: 1}
+-
+  inp: {wood: 1, stone: 1, stick: 1, villager: 1}
+  out: {shed: 1}
+-
+  inp: {shell: 1, wood: 2}
+  out: {shell_chest: 1}
+-
+  inp: {plank: 2, sail: 1, villager: 1}
+  out: {sloop: 1}
+-
+  inp: {flint: 2, brick: 2, plank: 1, villager: 1}
+  out: {smelter: 1}
+-
+  inp: {wood: 1, stick: 2}
+  out: {spear: 1}
+-
+  inp: {campfire: 1, potato: 1, raw_meat: 1, onion: 1, carrot: 1}
+  out: {stew: 1}
+-
+  inp: {wood: 1, villager: 1}
+  out: {stick: 1}
 -
   inp: {brick: 1, iron_bar: 1, flint: 1, villager: 1}
   out: {stove: 1}
+-
+  inp: {raw_fish: 1, seaweed: 1}
+  out: {sushi: 1}
+-
+  inp: {iron_bar: 1, stick: 2}
+  out: {sword: 1}
+-
+  inp: {omelette: 1, seaweed: 1}
+  out: {tamago_sushi: 1}
+-
+  inp: {plank: 5, brick: 5, iron_bar: 3, villager: 1}
+  out: {temple: 1}
+-
+  inp: {stone: 1, iron_bar: 1, villager: 1}
+  out: {warehouse: 1}
 
 # travelling_cart 1 item
 
