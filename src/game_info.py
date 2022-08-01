@@ -33,18 +33,19 @@ class Cards:
                 name_key = self._get_url_name(card['name'])
                 self.cards[name_key] = card
                 self.cards[name_key]['category'] = category_name
-                self.cards[name_key]['url'] = f'/recipes/{name_key}'
+                self.cards[name_key]['url'] = url_for('recipes', name=name_key)
                 if image_spec:
                     img_name = self.cards[name_key].pop('image_name')
-                    self.cards[name_key]['png_url'] = url_for(
-                        'static',
-                        filename=f"img/{img_name}.png"
-                    )
                 else:
-                    self.cards[name_key]['png_url'] = url_for(
-                        'static',
-                        filename=f'img/{name_key}.png'
-                    )
+                    img_name = name_key
+                self.cards[name_key]['png_url'] = url_for(
+                    'static',
+                    filename=f'img/{img_name}.png'
+                )
+                self.cards[name_key]['ico_url'] = url_for(
+                    'static',
+                    filename=f'icon/{img_name}.ico'
+                )
 
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
