@@ -21,11 +21,11 @@ def main_page():
 @app.route('/recipes/<name>')
 def recipes(name=None):
     cards = Cards()
-    create_recipes = get_recipes(cards, output=name)
     return render_template(
         'card_templ.jinja',
         card=cards.get_card(name),
-        create_recipes=create_recipes
+        create_recipes=get_recipes(cards, output=name),
+        use_recipes=get_recipes(cards, input=name)
     )
 
 

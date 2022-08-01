@@ -96,5 +96,4 @@ def _fill_recipe_cards(recipe: dict, cards: Cards) -> dict:
         'outputs': [cards.get_card(card) | {'count': count}
                     for card, count in recipe['out'].items()],
         'time': recipe['time'] if 'time' in recipe else None,
-        'place': recipe['place'] if 'place' in recipe else 'Desk'
     }

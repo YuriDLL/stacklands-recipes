@@ -21,7 +21,7 @@
             <div class="accordion-body">
               <div class="row mb-3 text-left">
                 {% for card in cards[card_category] %}
-                  <div class="col-2 themed-grid-col">
+                  <div class="col-md-2 themed-grid-col">
                     <a href="{{ card['url'] }}"><img src="{{ card['ico_url'] }}" style="width:64px;height:64px;"> {{ card['name'] }}</a>
                   </div>
                 {% endfor %}
