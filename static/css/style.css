@@ -61,7 +61,7 @@ h2{
 
 a{
     display: block;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     border: 5px solid black;
     border-radius: 5px;
     background-color: rgb(255, 250, 228);
@@ -89,4 +89,11 @@ a>img{
 .accordion-button{
     font-size: 30px;
     color: black;
+}
+
+
+#blok_card{
+    display: block;
+    width: 183px;
+    text-align: center;
 }
