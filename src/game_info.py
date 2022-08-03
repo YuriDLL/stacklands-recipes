@@ -73,27 +73,42 @@ def get_recipes(
         cards: Cards,
         input: str = None,
         output: str = None) -> List[dict]:
+    if input:
+        find_key = 'inp'
+        value = input
+    elif output:
+        find_key = 'out'
+        value = output
+    else:
+        return []
+    recipes: List[dict] = []
     with open('data/recipes.yaml', 'r') as file:
-        recipes = YAML().load(file)
-        if input:
-            find_key = 'inp'
-            value = input
-        elif output:
-            find_key = 'out'
-            value = output
-        else:
-            return []
-        recipes = [_fill_recipe_cards(recipe, cards) for recipe in recipes
-                   if value in recipe[find_key]]
-        return recipes
+        recipes_yaml: list = YAML().load(file)
+
+        with open('data/boosters_drop.yaml', 'r') as file:
+            booster_out_yaml: dict = YAML().load(file)
+            for booster in booster_out_yaml:
+                recipes_yaml.extend(_fill_recipe_booster(booster, card)
+                                    for card in booster_out_yaml[booster])
+
+        recipes.extend(_fill_recipe_cards(recipe, cards)
+                       for recipe in recipes_yaml
+                       if value in recipe[find_key])
+    return recipes
 
 
 def _fill_recipe_cards(recipe: dict, cards: Cards) -> dict:
-    recipe.items
     return {
         'inputs': [cards.get_card(card) | {'count': count}
                    for card, count in recipe['inp'].items()],
         'outputs': [cards.get_card(card) | {'count': count}
                     for card, count in recipe['out'].items()],
         'time': recipe['time'] if 'time' in recipe else None,
+    }
+
+
+def _fill_recipe_booster(booster: str, card: str) -> dict:
+    return {
+        'inp': {booster: 1},
+        'out': {card: 1}
     }
