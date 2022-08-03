@@ -11,7 +11,7 @@ Python 3.10 is required for the project.
     ```console
     python -m venv venv
 
-    ./Scripts/Activate.ps1
+    .venv/Scripts/Activate.ps1
     ```
 
 2. Install requirements.

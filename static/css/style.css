@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Arial Rounded MT Bold";
+    src: url(/static/fonts/Arial_Rounded_MT_Bold.ttf) format("truetype");
+}
+/* общий фон */
+body {
+    font-family: 'Arial Rounded MT Bold';
+    background-color: rgb(156, 194, 157);
+}
+
+h1 {
+    margin-top: 10px;
+    display: block;
+    font-size: 40px;
+    line-height: 43px;
+    letter-spacing: -1px;
+    border: 3px solid black;
+    border-bottom: 10px solid black;
+    width: 37%;
+    text-align: center;
+    background-color: rgb(255, 250, 228);
+}
+
+#ccd{
+    font-size: 40px;
+    line-height: 43px;
+    letter-spacing: -1px;
+    border: 3px solid black;
+    border-bottom: 10px solid black;
+    /* width: 18%; */
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    background-color: rgb(255, 250, 228);
+}
+
+h2{
+    margin: -3px -3px 0px -3px;
+    display: block;
+    font-size: 40px;
+    line-height: 43px;
+    letter-spacing: -1px;
+    border: 3px solid black;
+    border-bottom: 10px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 250, 228);
+    color: black;
+}
+/* фон общего блока */
+.container {
+    background-color: rgb(156, 194, 157);
+}
+/* фон отдельного контейнера */
+.accordion-body {
+    background-color: rgb(184, 230, 183);
+    border: 3px solid black;
+    margin: 0px -3px 0px -3px;
+}
+
+a{
+    display: block;
+    margin-bottom: 5%;
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: rgb(255, 250, 228);
+    height: 150px;
+    width: 125px;
+    text-align: center;
+}
+
+
+
+a>img{
+    margin-top: 20px;
+    border: 1px solid rgb(245, 231, 176);
+    border-radius: 50%;
+    background-color:rgb(245, 231, 176) ;
+}
+
+.card_name{
+    background: url(/static/img/line.png) 0% 100%/125px 5px no-repeat;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 125px;
+}
+
+.accordion-button{
+    font-size: 30px;
+    color: black;
+}
