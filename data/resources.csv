@@ -1,38 +1,38 @@
-name,cost
-Bone,3
-Bottle of Water,1
-Brick,5
-Charcoal,1
-Coin,
-Corpse,
-Cotton,1
-Empty Bottle,1
-Fabric,5
-Fish Rod,3
-Flint,2
-Glass,3
-Gold Bar,5
-Gold Ore,3
-Golden Goblet,
-Goop,0
-Iron Bar,5
-Iron Ore,3
-Island Relic,1
-Key,3
-Map,3
-Old Tome,3
-Plank,5
-Poop,1
-Rope,3
-Sacred Chest,
-Sacred Key,
-Sail,3
-Sand,1
-Sandstone,2
-Shell,
-Spear,3
-Stick,2
-Stone,1
-Sword,3
-Treasure Map,3
-Wood,1
+name,cost,image_color
+Bone,3,gray
+Bottle of Water,1,gray
+Brick,5,gray
+Charcoal,1,gray
+Coin,,gold
+Corpse,,gray
+Cotton,1,gray
+Empty Bottle,1,gray
+Fabric,5,gray
+Fish Rod,3,gray
+Flint,2,gray
+Glass,3,gray
+Gold Bar,5,gray
+Gold Ore,3,gray
+Golden Goblet,,gray
+Goop,0,gray
+Iron Bar,5,gray
+Iron Ore,3,gray
+Island Relic,1,gold
+Key,3,gold
+Map,3,gray
+Old Tome,3,gray
+Plank,5,gray
+Poop,1,gray
+Rope,3,gray
+Sacred Chest,,gold
+Sacred Key,,gold
+Sail,3,gray
+Sand,1,gray
+Sandstone,2,gray
+Shell,,gold
+Spear,3,gray
+Stick,2,gray
+Stone,1,gray
+Sword,3,gray
+Treasure Map,3,gray
+Wood,1,gray

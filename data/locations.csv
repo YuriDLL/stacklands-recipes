@@ -1,9 +1,9 @@
-name,cost
-Catacombs,5
-Cave,5
-Forest,5
-Graveyard,5
-Jungle,5
-Mountain,5
-Old Village,5
-Plains,5
+name,cost,image_color
+Catacombs,5,purple
+Cave,5,purple
+Forest,5,purple
+Graveyard,5,purple
+Jungle,5,purple
+Mountain,5,purple
+Old Village,5,purple
+Plains,5,purple

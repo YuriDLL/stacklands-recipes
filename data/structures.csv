@@ -1,48 +1,48 @@
-name,cost
-Animal Pen,3
-Apple Tree,0
-Aquarium,3
-Banana Tree,0
-Berry Bush,0
-Brickyard,1
-Campfire,1
-Cathedral,10
-Coin Chest,0
-Composter,5
-Cotton Plant,1
-Distillery,3
-Driftwood,0
-Farm,5
-Fish Trap,3
-Fishing Spot,1
-Frigate,10
-Garden,5
-Gold Deposit,0
-Gold Mine,5
-Greenhouse,3
-House,3
-Iron Deposit,0
-Iron Mine,5
-Lumber Camp,5
-Market,5
-Mess Hall,5
-Pirate Boat,
-Quarry,5
-Rock,0
-Rowboat,3
-Sand Quarry,5
-Sawmill,5
-Shed,3
-Shell Chest,0
-Sloop,5
-Smelter,5
-Soil,3
-Spring,1
-Stove,5
-Strange Portal,
-Sugar Cane,0
-Temple,
-Travelling Cart,
-Treasure Chest,3
-Tree,0
-Warehouse,5
+name,cost,image_color
+Animal Pen,3,pink
+Apple Tree,0,black
+Aquarium,3,pink
+Banana Tree,0,black
+Berry Bush,0,black
+Brickyard,1,pink
+Campfire,1,pink
+Cathedral,10,pink
+Coin Chest,0,pink
+Composter,5,pink
+Cotton Plant,1,black
+Distillery,3,pink
+Driftwood,0,black
+Farm,5,pink
+Fish Trap,3,pink
+Fishing Spot,1,black
+Frigate,10,pink
+Garden,5,pink
+Gold Deposit,0,black
+Gold Mine,5,pink
+Greenhouse,3,pink
+House,3,pink
+Iron Deposit,0,black
+Iron Mine,5,pink
+Lumber Camp,5,pink
+Market,5,pink
+Mess Hall,5,pink
+Pirate Boat,,red
+Quarry,5,pink
+Rock,0,black
+Rowboat,3,pink
+Sand Quarry,5,pink
+Sawmill,5,pink
+Shed,3,pink
+Shell Chest,0,pink
+Sloop,5,pink
+Smelter,5,pink
+Soil,3,black
+Spring,1,black
+Stove,5,pink
+Strange Portal,,red
+Sugar Cane,0,black
+Temple,,gold
+Travelling Cart,,black
+Treasure Chest,3,gold
+Tree,0,black
+Warehouse,5,pink

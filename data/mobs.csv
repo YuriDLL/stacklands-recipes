@@ -1,38 +1,38 @@
-name,health
-Baby,
-Dog,3
-Explorer,3
-Fisher,5
-Frendly Pirate,5
-Militia,6
-Swordman,7
-Trained Monkey,2
-Villager,5
-Bear,10
-Chicken,2
-Cow,5
-Crab,2
-Demon,99
-Demon Lord,666
-Giant Rat,12
-Goblin,5
-Kraken,150
-Momma Crab,50
-Monkey,2
-Parrot,2
-Pirate,3
-Rabbit,2
-Rat,3
-Seagull,3
-Skeleton,5
-Slime,8
-Small Slime,2
-Snake,3
-Tentacle,50
-Tiger,5
-Wolf,10
-Cod,1
-Eel,3
-Mackerel,2
-Shark,8
-Tuna,3
+name,health,image_color
+Baby,,yellow
+Dog,3,yellow
+Explorer,3,yellow
+Fisher,5,yellow
+Frendly Pirate,5,yellow
+Militia,6,yellow
+Swordman,7,yellow
+Trained Monkey,2,yellow
+Villager,5,yellow
+Bear,10,red
+Chicken,2,brown
+Cow,5,brown
+Crab,2,brown
+Demon,99,red
+Demon Lord,666,red
+Giant Rat,12,red
+Goblin,5,red
+Kraken,150,red
+Momma Crab,50,red
+Monkey,2,brown
+Parrot,2,brown
+Pirate,3,red
+Rabbit,2,brown
+Rat,3,red
+Seagull,3,red
+Skeleton,5,red
+Slime,8,red
+Small Slime,2,red
+Snake,3,red
+Tentacle,50,red
+Tiger,5,red
+Wolf,10,red
+Cod,1,green
+Eel,3,green
+Mackerel,2,green
+Shark,8,green
+Tuna,3,green

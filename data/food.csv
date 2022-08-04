@@ -1,30 +1,30 @@
-name,cost,food
-Apple,2,2
-Banana,1,1
-Berry,1,1
-Bottle of Rum,3,2
-Cane Sugar,2,1
-Carrot,2,2
-Ceviche,3,3
-Chili Pepper,2,1
-Cooked Crab,2,2
-Cooked Meat,3,2
-Egg,1,0
-Frittata,3,3
-Fruit Salad,5,3
-Grilled Fish,3,2
-Lime,2,1
-Milk,1,1
-Milkshake,5,2
-Mushroom,2,1
-Omelette,5,3
-Onion,2,1
-Potato,2,0
-Raw Crab Meat,2,0
-Raw Fish,2,1
-Raw Meat,3,0
-Seafood Stew,2,5
-Seaweed,1,1
-Stew,10,10
-Sushi,2,2
-Tamago Sushi,2,4
+name,cost,food,image_color
+Apple,2,2,orange
+Banana,1,1,orange
+Berry,1,1,orange
+Bottle of Rum,3,2,orange
+Cane Sugar,2,1,orange
+Carrot,2,2,orange
+Ceviche,3,3,orange
+Chili Pepper,2,1,orange
+Cooked Crab,2,2,orange
+Cooked Meat,3,2,orange
+Egg,1,0,orange
+Frittata,3,3,orange
+Fruit Salad,5,3,orange
+Grilled Fish,3,2,orange
+Lime,2,1,orange
+Milk,1,1,orange
+Milkshake,5,2,orange
+Mushroom,2,1,orange
+Omelette,5,3,orange
+Onion,2,1,orange
+Potato,2,0,orange
+Raw Crab Meat,2,0,orange
+Raw Fish,2,1,orange
+Raw Meat,3,0,orange
+Seafood Stew,2,5,orange
+Seaweed,1,1,orange
+Stew,10,10,orange
+Sushi,2,2,orange
+Tamago Sushi,2,4,orange

@@ -6,12 +6,29 @@ from flask import url_for
 from ruamel.yaml import YAML
 
 
-class Cards:
+class Cards(object):
 
     def __init__(self) -> None:
         self._prepare_cards()
 
     def get_card(self, name_key: str) -> Dict[str, Any]:
+        card = self.cards[name_key]
+        card['url'] = url_for('recipes', name=name_key)
+        if 'image_name' in card:
+            img_name = card.pop('image_name')
+        else:
+            img_name = name_key
+        card['png_url'] = url_for(
+            'static',
+            filename=f'img/{img_name}.png'
+        )
+        card['ico_url'] = url_for(
+            'static',
+            filename=f'icon/{img_name}.ico'
+        )
+        return card
+
+    def get_card_wo_url(self, name_key: str) -> Dict[str, Any]:
         return self.cards[name_key]
 
     def iterate(self):
@@ -33,19 +50,6 @@ class Cards:
                 name_key = self._get_url_name(card['name'])
                 self.cards[name_key] = card
                 self.cards[name_key]['category'] = category_name
-                self.cards[name_key]['url'] = url_for('recipes', name=name_key)
-                if image_spec:
-                    img_name = self.cards[name_key].pop('image_name')
-                else:
-                    img_name = name_key
-                self.cards[name_key]['png_url'] = url_for(
-                    'static',
-                    filename=f'img/{img_name}.png'
-                )
-                self.cards[name_key]['ico_url'] = url_for(
-                    'static',
-                    filename=f'icon/{img_name}.ico'
-                )
 
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
