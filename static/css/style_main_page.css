@@ -20,7 +20,7 @@ h1 {
     text-align: center;
     background-color: rgb(255, 250, 228);
 }
-
+/* названия спойлеров */
 #ccd{
     font-size: 40px;
     line-height: 43px;
@@ -61,7 +61,7 @@ h2{
 
 a{
     display: block;
-    margin-bottom: 10%;
+    margin-top: 20%;
     border: 5px solid black;
     border-radius: 5px;
     background-color: rgb(255, 250, 228);
@@ -73,17 +73,22 @@ a{
 
 
 a>img{
-    margin-top: 20px;
+    margin-top: 15px;
     border: 1px solid rgb(245, 231, 176);
     border-radius: 50%;
     background-color:rgb(245, 231, 176) ;
 }
 
 .card_name{
-    background: url(/static/img/line.png) 0% 100%/125px 5px no-repeat;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 25px;
     font-weight: 125px;
+}
+.card_name>h6{
+    display: block;
+    background-color: black;
+    height: 5px;
+    width: 100%;
 }
 
 .accordion-button{
@@ -94,6 +99,7 @@ a>img{
 
 #blok_card{
     display: block;
-    width: 183px;
+    margin-left: 10px;
+    width: 150px;
     text-align: center;
 }
