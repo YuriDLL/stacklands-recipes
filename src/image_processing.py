@@ -7,8 +7,8 @@ def prepare_image(name_key: str, color: str, out_suffix: str = '') -> None:
     ico_size = 64, 64
 
     source_images_path = 'data/raw_img/'
-    images_path = 'static/generated/img/'
-    icons_path = 'static/generated/icon/'
+    images_path = 'static/generate/img/'
+    icons_path = 'static/generate/icon/'
 
     if not os.path.exists(icons_path):
         os.makedirs(icons_path)

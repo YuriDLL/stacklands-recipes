@@ -49,6 +49,8 @@ class Cards(object):
                     BOOSTER_SUFFIX = '_booster'
                     prepare_image(card['image_name'], 'black', BOOSTER_SUFFIX)
                     card['image_name'] += BOOSTER_SUFFIX
+                else:
+                    prepare_image(name_key, card['image_color'])
 
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')

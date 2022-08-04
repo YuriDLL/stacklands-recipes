@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 cards = Cards()
 
+
 @app.route('/')
 @app.route('/recipes')
 def main_page():
