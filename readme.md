@@ -9,7 +9,7 @@ Python 3.10 is required for the project.
 1. Create virtual environment.
 
     ```console
-    .venv/Scripts/Activate.ps1
+    python -m venv venv
     ```
 
 2. Activate script(depends on your system).

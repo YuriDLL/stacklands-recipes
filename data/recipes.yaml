@@ -189,6 +189,43 @@
   inp: {stone: 1, iron_bar: 1, villager: 1}
   out: {warehouse: 1}
 
+# works
+-
+  inp: {apple_tree: 1, villager: 1}
+  out: {apple: 1}
+-
+  inp: {banana_tree: 1, villager: 1}
+  out: {banana: 1}
+-
+  inp: {berry_bush: 1, villager: 1}
+  out: {berry: 1}
+-
+  inp: {cotton_plant: 1, villager: 1}
+  out: {cotton: 1}
+-
+  inp: {driftwood: 1, villager: 1}
+  out: {wood: 1}
+-
+  inp: {fishing_spot: 1, villager: 1}
+  out: {cod: 1}
+-
+  inp: {gold_deposit: 1, villager: 1}
+  out: {gold_ore: 1}
+-
+  inp: {iron_deposit: 1, villager: 1}
+  out: {iron_ore: 1}
+-
+  inp: {rock: 1, villager: 1}
+  out: {stone: 1}
+-
+  inp: {spring: 1, empty_bottle: 1}
+  out: {bottle_of_water: 1}
+-
+  inp: {sugar_cane: 1, villager: 1}
+  out: {cane_sugar: 1}
+-
+  inp: {tree: 1, villager: 1}
+  out: {wood: 1}
 # travelling_cart 1 item
 
 -
