@@ -3,24 +3,23 @@ from src.game_info import Cards, get_recipes
 
 app = Flask(__name__)
 
+cards = Cards()
 
 @app.route('/')
 @app.route('/recipes')
 def main_page():
-    cards = Cards()
     cards_by_category = {}
-    for name_key, info in cards.iterate():
-        category = info['category']
+    for card in cards.iterate():
+        category = card['category']
         if category in cards_by_category:
-            cards_by_category[category].append(info)
+            cards_by_category[category].append(card)
         else:
-            cards_by_category[category] = [info]
+            cards_by_category[category] = [card]
     return render_template('main_page.jinja', cards=cards_by_category)
 
 
 @app.route('/recipes/<name>')
 def recipes(name=None):
-    cards = Cards()
     return render_template(
         'card_templ.jinja',
         card=cards.get_card(name),

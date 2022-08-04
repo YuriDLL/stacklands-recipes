@@ -2,4 +2,4 @@ venv
 __pycache__
 static/icon
 var
-static/generated
+static/generate

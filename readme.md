@@ -6,24 +6,22 @@ The site describes recipes from staclands game `v1.1.6`.
 
 Python 3.10 is required for the project.
 
-1. Create and activate virtual environment.
+1. Create virtual environment.
 
     ```console
-    python -m venv venv
-
     .venv/Scripts/Activate.ps1
     ```
 
-2. Install requirements.
+2. Activate script(depends on your system).
+
+    ```console
+    .venv/Scripts/Activate.ps1
+    ```
+
+3. Install requirements.
 
     ```console
     pip install -r requirements.txt
-    ```
-
-3. Activate script for prepare icons.
-
-    ```console
-    python .\scripts\create_icons.py
     ```
 
 ## Run server

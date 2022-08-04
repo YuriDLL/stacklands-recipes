@@ -1,9 +1,11 @@
 import csv
 from dataclasses import dataclass
-from typing import Any, Dict, List
+from typing import Any, Dict, Iterable, List
 
 from flask import url_for
 from ruamel.yaml import YAML
+
+from src.image_processing import prepare_image
 
 
 class Cards(object):
@@ -12,27 +14,20 @@ class Cards(object):
         self._prepare_cards()
 
     def get_card(self, name_key: str) -> Dict[str, Any]:
-        card = self.cards[name_key]
+        card = self.cards[name_key].copy()
         card['url'] = url_for('recipes', name=name_key)
         if 'image_name' in card:
             img_name = card.pop('image_name')
         else:
             img_name = name_key
-        card['png_url'] = url_for(
-            'static',
-            filename=f'img/{img_name}.png'
-        )
-        card['ico_url'] = url_for(
-            'static',
-            filename=f'icon/{img_name}.ico'
-        )
+        card['png_url'] = url_for('static',
+                                  filename=f'generate/img/{img_name}.png')
+        card['ico_url'] = url_for('static',
+                                  filename=f'generate/icon/{img_name}.ico')
         return card
 
-    def get_card_wo_url(self, name_key: str) -> Dict[str, Any]:
-        return self.cards[name_key]
-
-    def iterate(self):
-        return self.cards.items()
+    def iterate(self) -> Iterable[Dict[str, Any]]:
+        return (self.get_card(key_name) for key_name in self.cards.keys())
 
     def _prepare_cards(self) -> None:
         self.cards: Dict[str, Dict[str, Any]] = {}
@@ -50,6 +45,10 @@ class Cards(object):
                 name_key = self._get_url_name(card['name'])
                 self.cards[name_key] = card
                 self.cards[name_key]['category'] = category_name
+                if 'image_name' in card:
+                    BOOSTER_SUFFIX = '_booster'
+                    prepare_image(card['image_name'], 'black', BOOSTER_SUFFIX)
+                    card['image_name'] += BOOSTER_SUFFIX
 
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
