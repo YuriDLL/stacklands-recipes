@@ -1,0 +1,141 @@
+/* color card */
+#yellow_link_card{
+    background-color: rgb(255, 250, 228);
+}
+#yellow_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(245, 231, 176);
+}
+#yellow_card_count
+{
+    background-color: rgb(255, 250, 228);
+}
+
+
+#red_link_card{
+    background-color: rgb(214, 91, 91);
+}
+#red_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(233, 118, 118);
+}
+#red_card_count
+{
+    background-color: rgb(214, 91, 91);
+}
+
+
+#gray_link_card{
+    background-color: rgb(100, 111, 128);
+}
+#gray_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(152, 159, 170);
+}
+#gray_card_name{
+    color:white;
+}
+#gray_card_count
+{
+    background-color: rgb(100, 111, 128);
+    color:white
+}
+
+
+#orange_link_card{
+    background-color: rgb(227, 147, 79);
+}
+#orange_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(243, 167, 101);
+}
+#orange_card_count
+{
+    background-color: rgb(227, 147, 79);
+}
+
+
+#brown_link_card{
+    background-color: rgb(144, 102, 69);
+}
+#brown_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(167, 129, 98);
+}
+#brown_card_count
+{
+    background-color: rgb(144, 102, 69);
+}
+
+
+#purple_link_card{
+    background-color: rgb(178, 100, 181);
+}
+#purple_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(198, 130, 200);
+}
+#purple_card_name{
+    color:white;
+}
+#purple_card_count
+{
+    background-color: rgb(178, 100, 181);
+    color:white;
+}
+
+
+#green_link_card{
+    background-color: rgb(169, 215, 128);
+}
+#green_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(107, 145, 72);
+}
+#green_card_count
+{
+    background-color: rgb(169, 215, 128);
+}
+
+
+#gold_link_card{
+    background-color: rgb(244, 217, 151);
+}
+#gold_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(240, 194, 86);
+}
+#gold_card_count
+{
+    background-color: rgb(244, 217, 151);
+}
+
+
+#black_link_card{
+    background-color: rgb(64, 63, 58);
+}
+#black_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(95, 95, 89);
+}
+#black_card_name{
+    color:white;
+}
+#black_card_count
+{
+    background-color: rgb(64, 63, 58);
+    color:white;
+}
+
+
+#pink_link_card{
+    background-color: rgb(239, 181, 167);
+}
+#pink_link_card>img{
+    border: 1px solid background-color;
+    background-color:rgb(245, 156, 135);
+}
+#pink_card_count
+{
+    background-color: rgb(239, 181, 167);
+}

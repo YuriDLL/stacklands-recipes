@@ -39,7 +39,7 @@ def _change_color(image: Image, color: str) -> Image:
         'orange': (False, 'rgb(227, 147, 79)'),
         'red': (False, 'rgb(214, 91, 91)'),
         'brown': (False, 'rgb(144, 102, 69)'),
-        'purple': (False, 'rgb(178, 100, 181)'),
+        'purple': (True, 'rgb(178, 100, 181)'),
         'green': (False, 'rgb(169, 215, 128)'),
         'gold': (False, 'rgb(244, 217, 151)'),
         'pink': (False, 'rgb(239, 181, 167)'),

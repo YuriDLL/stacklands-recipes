@@ -59,24 +59,22 @@ h2{
     margin: 0px -3px 0px -3px;
 }
 
+/* карты*/
 a{
     display: block;
     margin-top: 20%;
     border: 5px solid black;
     border-radius: 5px;
-    background-color: rgb(255, 250, 228);
+    /* background-color: rgb(255, 250, 228); */
     height: 150px;
     width: 125px;
     text-align: center;
 }
-
-
-
-a>img{
+a img{
     margin-top: 15px;
-    border: 1px solid rgb(245, 231, 176);
+    /* border: 1px solid rgb(245, 231, 176); */
     border-radius: 50%;
-    background-color:rgb(245, 231, 176) ;
+    /* background-color:rgb(245, 231, 176) ; */
 }
 
 .card_name{
@@ -90,16 +88,11 @@ a>img{
     height: 5px;
     width: 100%;
 }
-
-.accordion-button{
-    font-size: 30px;
-    color: black;
-}
-
-
-#blok_card{
+.blok_card{
     display: block;
     margin-left: 10px;
+    margin-top: 10px;
     width: 150px;
     text-align: center;
 }
+
