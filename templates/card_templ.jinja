@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/static/css/style_info_card_page.css">
   <link rel="stylesheet" href="/static/css/reset.css">
   <link rel="stylesheet" href="/static/css/style_color_card.css">
+  <link rel="stylesheet" href="/static/css/anim_main.css">
 </head>
 
 <body>
@@ -19,9 +20,15 @@
 
       <div class="row g-5" id="main_block">
         <div class="col-md-1 col-lg-8">
-          <div class="general_name"><a href="{{url_for('main_page')}}">
-              <h2 id="home_page">Home</h2>
+          <div class="general_name" >
+            <div class="back_home_card">
+            <a href="{{url_for('main_page')}}" id="back_home_card">
+              <h2 id="home_page" style="background-color: rgb(239, 181, 167);">Home<p id="card_line"></p>
+              </h2>
+              <img style="border: 1px solid rgb(245, 156, 135); 
+                      background-color:rgb(245, 156, 135);" src="/static/generate/icon/house.ico">
             </a>
+          </div>
             <div class="name_game">
               <h4 id="name_game_id">Stacklands</h4>
             </div>
@@ -36,24 +43,27 @@
                   {% for card in recepie['inputs'] %}
                   <div class="form_card_left" style="float: left;">
                     <a href="{{ card['url'] }}" id="{{ card['image_color'] }}_link_card">
-                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p id="card_line"></p>
+                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }}
+                        <p id="card_line"></p>
                       </div> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;">
                     </a>
-                    <p id="card_count">x{{card['count']}}</p>
+                    <p class="card_count" id="{{ card['image_color'] }}_card_count">x{{card['count']}}</p>
                   </div>
                   {% endfor %}
                 </td>
                 <td>
-                  <img id="arrow" src={{ url_for('static', filename='img/arrow.png' ) }} style="width:64px;height:64px;">
+                  <img id="arrow" src={{ url_for('static', filename='img/arrow.png' ) }}
+                    style="width:64px;height:64px;">
                 </td>
                 <td>
                   {% for card in recepie['outputs'] %}
                   <div class="form_card_right" style="float: right;">
                     <a href="{{ card['url'] }}" id="{{ card['image_color'] }}_link_card">
-                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p id="card_line"></p>
+                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p
+                          id="card_line"></p>
                       </div> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;">
                     </a>
-                    <p id="card_count">x{{card['count']}}</p>
+                    <p class="card_count" id="{{ card['image_color'] }}_card_count">x{{card['count']}}</p>
                   </div>
                   {% endfor %}
                 </td>
@@ -72,7 +82,8 @@
                   {% for card in recepie['inputs'] %}
                   <div class="form_card_left" style="float: left;">
                     <a href="{{ card['url'] }}" id="{{ card['image_color'] }}_link_card">
-                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p id="card_line"></p>
+                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p
+                          id="card_line"></p>
                       </div> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;">
                     </a>
                     <p class="card_count" id="{{ card['image_color'] }}_card_count">x{{card['count']}}</p>
@@ -80,16 +91,18 @@
                   {% endfor %}
                 </td>
                 <td>
-                  <img id="arrow" src={{ url_for('static', filename='img/arrow.png' ) }} style="width:64px;height:64px;">
+                  <img id="arrow" src={{ url_for('static', filename='img/arrow.png' ) }}
+                    style="width:64px;height:64px;">
                 </td>
                 <td>
                   {% for card in recepie['outputs'] %}
                   <div class="form_card_right" style="float: right;">
                     <a href="{{ card['url'] }}" id="{{ card['image_color'] }}_link_card">
-                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p id="card_line"></p>
+                      <div class="name_card" id="{{ card['image_color'] }}_card_name">{{ card['name'] }} <p
+                          id="card_line"></p>
                       </div> <img src="{{ card['png_url'] }}" style="width:64px;height:64px;">
                     </a>
-                    <p id="card_count">x{{card['count']}}</p>
+                    <p class="card_count" id="{{ card['image_color'] }}_card_count">x{{card['count']}}</p>
                   </div>
                   {% endfor %}
                 </td>
@@ -99,10 +112,11 @@
           </table>
           {% endif %}
         </div>
-        <div class="col-md-2 col-lg-2" id="main_card">
-          <h2 id="name_main_card">{{ card['name'] }} <h6 id="line_main_card"></h6>
+        <div class="col-md-2 col-lg-2" id="{{ card['image_color'] }}_main_card">
+          <h2 id="{{ card['image_color'] }}_name_main_card">{{ card['name'] }} <h6 id="line_main_card"></h6>
           </h2>
-          <img src="{{ card['png_url'] }}" id="img_main_card" style="width:156px;height:156px;">
+          <img src="{{ card['png_url'] }}" id="{{ card['image_color'] }}_img_main_card"
+            style="width:156px;height:156px;">
         </div>
       </div>
     </main>
