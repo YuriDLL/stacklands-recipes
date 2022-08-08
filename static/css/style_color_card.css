@@ -1,6 +1,7 @@
 /* color card */
 #yellow_link_card{
     background-color: rgb(255, 250, 228);
+    transition-duration: 0.5s;
 }
 #yellow_link_card>img{
     border: 1px solid background-color;
@@ -38,6 +39,7 @@
 
 #red_link_card{
     background-color: rgb(214, 91, 91);
+    transition-duration: 0.5s;
 }
 #red_link_card>img{
     border: 1px solid background-color;
@@ -74,6 +76,7 @@
 
 #gray_link_card{
     background-color: rgb(100, 111, 128);
+    transition-duration: 0.5s;
 }
 #gray_link_card>img{
     border: 1px solid background-color;
@@ -115,6 +118,7 @@
 
 #orange_link_card{
     background-color: rgb(227, 147, 79);
+    transition-duration: 0.5s;
 }
 #orange_link_card>img{
     border: 1px solid background-color;
@@ -151,6 +155,7 @@
 
 #brown_link_card{
     background-color: rgb(144, 102, 69);
+    transition-duration: 0.5s;
 }
 #brown_link_card>img{
     border: 1px solid background-color;
@@ -188,6 +193,7 @@
 
 #purple_link_card{
     background-color: rgb(178, 100, 181);
+    transition-duration: 0.5s;
 }
 #purple_link_card>img{
     border: 1px solid background-color;
@@ -229,6 +235,7 @@
 
 #green_link_card{
     background-color: rgb(169, 215, 128);
+    transition-duration: 0.5s;
 }
 #green_link_card>img{
     border: 1px solid background-color;
@@ -265,6 +272,7 @@
 
 #gold_link_card{
     background-color: rgb(244, 217, 151);
+    transition-duration: 0.5s;
 }
 #gold_link_card>img{
     border: 1px solid background-color;
@@ -302,6 +310,7 @@
 
 #black_link_card{
     background-color: rgb(64, 63, 58);
+    transition-duration: 0.5s;
 }
 #black_link_card>img{
     border: 1px solid background-color;
@@ -343,6 +352,7 @@
 
 #pink_link_card{
     background-color: rgb(239, 181, 167);
+    transition-duration: 0.5s;
 }
 #pink_link_card>img{
     border: 1px solid background-color;
