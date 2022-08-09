@@ -1,9 +1,10 @@
 from flask import Flask, render_template
-from src.game_info import Cards, get_recipes
+from src.game_info import Cards, Recipes
 
 app = Flask(__name__)
 
 cards = Cards()
+recipes_list = Recipes(cards)
 
 
 @app.route('/')
@@ -24,8 +25,8 @@ def recipes(name=None):
     return render_template(
         'card_templ.jinja',
         card=cards.get_card(name),
-        create_recipes=get_recipes(cards, output=name),
-        use_recipes=get_recipes(cards, input=name)
+        create_recipes=recipes_list.get_recipes(output=name),
+        use_recipes=recipes_list.get_recipes(input=name)
     )
 
 

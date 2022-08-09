@@ -15,20 +15,21 @@ def prepare_image(name_key: str, color: str, out_suffix: str = '') -> None:
     if not os.path.exists(images_path):
         os.makedirs(images_path)
 
-    file = os.path.join(source_images_path, name_key + '.png')
+    raw_png_file = os.path.join(source_images_path, name_key + '.png')
 
-    with Image.open(file, mode='r') as im:
-        path, file = os.path.split(file)
-        file, ext = os.path.splitext(file)
-        im = _change_color(im, color)
+    png_file = os.path.join(images_path, name_key + out_suffix + ".png")
+    ico_file = os.path.join(icons_path, name_key + out_suffix + ".ico")
 
-        png_file = os.path.join(images_path, file + out_suffix + ".png")
-        if not os.path.exists(png_file):
-            im.save(png_file, "PNG")
-        ico_file = os.path.join(icons_path, file + out_suffix + ".ico")
-        if not os.path.exists(ico_file):
-            im.thumbnail(ico_size)
-            im.save(ico_file, "ICO")
+    if not os.path.exists(png_file) or not os.path.exists(ico_file):
+        with Image.open(raw_png_file, mode='r') as im:
+            im = _change_color(im, color)
+
+            if not os.path.exists(png_file):
+                im.save(png_file, "PNG")
+
+            if not os.path.exists(ico_file):
+                im.thumbnail(ico_size)
+                im.save(ico_file, "ICO")
 
 
 def _change_color(image: Image, color: str) -> Image:
