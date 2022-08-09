@@ -1,0 +1,103 @@
+# works
+
+apple_tree:
+  - apple
+  - wood
+  - stick
+banana_tree:
+  - banana0
+berry_bush:
+  - berry0
+cotton_plant:
+  - cotton0
+driftwood:
+  - wood
+fishing_spot:
+  - cod
+gold_deposit:
+  - gold_ore
+iron_deposit:
+  - iron_ore
+rock:
+  - stone
+sugar_cane:
+  - cane_sugar
+tree:
+  - wood
+  - stick
+catacombs:
+  - skeleton 
+  - goblin 
+  - wolf 
+  - slime 
+  - treasure_chest 
+  - giant_rat
+cave:
+  - goblin 
+  - giant_rat 
+  - rat 
+  - pirate 
+  - snake 
+  - bear 
+  - crab 
+  - treasure_map
+forest:
+  - berry_bush 
+  - apple 
+  - tree 
+  - stick 
+  - rabbit 
+  - goblin
+  - bear 
+  - mushroom 
+  - catacombs 
+  - treasure_chest 
+  - apple_tree 
+  - wolf
+graveyard:
+  - bone 
+  - soil 
+  - skeleton 
+  - treasure_chest 
+  - corpse 
+  - catacombs
+jungle:
+  - tiger 
+  - cotton_plant 
+  - banana 
+  - monkey 
+  - lime 
+  - sugar_cane 
+  - parrot 
+  - baby 
+  - old_tome 
+  - wolf
+mountain:
+  - rock 
+  - iron_deposit 
+  - bear
+  - giant_rat 
+  - treasure_chest 
+  - catacombs
+old_village:
+  - coin 
+  - villager 
+  - wood 
+  - corpse 
+  - iron_bar 
+  - catacombs 
+  - slime 
+  - treasure_chest 
+  - old_tome 
+  - goblin
+  - milk
+plains:
+  - chicken 
+  - mushroom 
+  - wolf 
+  - soil 
+  - rat 
+  - cow 
+  - onion 
+  - carrot 
+  - milk

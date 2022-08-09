@@ -84,7 +84,7 @@ class Recipes:
         self.cards = cards
 
     @cached_property
-    def recipes_yaml(self) -> List[dict]:
+    def _recipes_yaml(self) -> List[dict]:
         recipes_yaml: List[dict] = []
         with open('data/recipes.yaml', 'r') as file:
             recipes_yaml.extend(YAML().load(file))
@@ -95,6 +95,13 @@ class Recipes:
                 recipes_yaml.extend(
                     self._fill_recipe_booster(booster, card)
                     for card in booster_out_yaml[booster]
+                )
+        with open('data/works.yaml', 'r') as file:
+            works_out_yaml: dict = YAML().load(file)
+            for factory in works_out_yaml:
+                recipes_yaml.extend(
+                    self._fill_recipe_work(factory, card)
+                    for card in works_out_yaml[factory]
                 )
         return recipes_yaml
 
@@ -111,7 +118,7 @@ class Recipes:
         else:
             return []
         recipes = [self._fill_recipe_cards(recipe)
-                   for recipe in self.recipes_yaml
+                   for recipe in self._recipes_yaml
                    if value in recipe[find_key]]
         return recipes
 
