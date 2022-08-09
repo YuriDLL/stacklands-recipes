@@ -1,6 +1,6 @@
 import csv
 from dataclasses import dataclass
-from functools import cached_property, cache
+from functools import cached_property
 from typing import Any, Dict, Iterable, List
 
 from flask import url_for
