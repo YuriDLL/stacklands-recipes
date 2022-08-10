@@ -137,6 +137,7 @@ a>img {
 /*  */
 
 .card_count {
+    position: static;
     display: block;
     margin-top: 5%;
     font-size: 20px;
