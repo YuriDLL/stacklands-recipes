@@ -1,14 +1,14 @@
-name,cost,cards_count,image_name
-Humble Beginnings,3,3,forest
-Seeking Wisdom,4,4,idea
-Reap and Sow,10,4,soil
-Curious Cuisine,10,3,frittata
-Logic and Reason,15,4,idea
-Explorers,20,3,mountain
-Order and Structure,25,4,rock
-On The Shore,3,3,sand
-Island of Ideas,4,4,island_idea
-Grilling and Brewing,6,4,chili_pepper
-Island Insights,10,4,island_idea
-Advanced Archipelago,12,4,frigate
-Enclave Explorers,15,5,jungle
+name,cost,cards_count,image_name,long_name
+Humble Beginnings,3,3,forest,long
+Seeking Wisdom,4,4,idea,long
+Reap and Sow,10,4,soil,short
+Curious Cuisine,10,3,frittata,long
+Logic and Reason,15,4,idea,long
+Explorers,20,3,mountain,short
+Order and Structure,25,4,rock,long
+On The Shore,3,3,sand,short
+Island of Ideas,4,4,island_idea,short
+Grilling and Brewing,6,4,chili_pepper,long
+Island Insights,10,4,island_idea,short
+Advanced Archipelago,12,4,frigate,long
+Enclave Explorers,15,5,jungle,long

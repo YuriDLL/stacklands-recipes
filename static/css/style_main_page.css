@@ -96,3 +96,9 @@ a img{
     width: 150px;
     text-align: center;
 }
+.long_name{
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 125px;
+    color: aliceblue;
+}

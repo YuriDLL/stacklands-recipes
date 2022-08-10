@@ -38,7 +38,7 @@
               <div class="blok_card">
                 <div class="col-md-2 themed-grid-col">
                   <a href="{{ card['url'] }}" id="{{ card['image_color'] }}_link_card">
-                    <div class="card_name" id="{{ card['image_color'] }}_card_name"> {{ card['name'] }} <h6></h6>
+                    <div class="card_name {{ card['long_name'] }}_name" id="{{ card['image_color'] }}_card_name"> {{ card['name'] }} <h6></h6>
                     </div>
                     <img src="{{ card['ico_url'] }}" style="width:64px;height:64px;">
                   </a>
