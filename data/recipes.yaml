@@ -196,6 +196,14 @@
 -
   inp: {corpse: 2}
   out: {graveyard: 1}
+
+-
+  inp: {house: 1, baby: 1}
+  out: {villager: 1}
+
+-
+  inp: {temple: 1, golden_goblet: 1}
+  out: {demon: 1}
 # travelling_cart 1 item
 
 -
