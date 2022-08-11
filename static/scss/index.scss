@@ -2,6 +2,39 @@
 
 @import "reset.scss";
 
+@font-face {
+    font-family: "Arial Rounded MT Bold";
+    src: url(/static/fonts/Arial_Rounded_MT_Bold.ttf) format("truetype");
+}
+
+body {
+    font-family: 'Arial Rounded MT Bold';
+}
+
+.wrapper {
+    background-color: $body-bg-color;
+    min-height: 100vh;
+    padding-top: $margin-default * 2;
+
+    .page-header {
+        max-height: 50%;
+        font-size: 3rem;
+        letter-spacing: -1px;
+
+        display: inline-block;
+        padding: 1rem 5rem;
+
+        border: $game-group-card-border-width solid $game-group-card-border-color;
+        border-bottom: $game-group-card-border-width * 3 solid $game-group-card-border-color;
+
+        text-align: center;
+        background-color: $game-group-card-header-background;
+    }
+
+    .page-body{
+        margin-top: $margin-default * 2;
+    }
+
+}
+
 @import "card.scss";
-@import "page.scss";
-@import "booster.scss";

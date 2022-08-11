@@ -1,28 +1,21 @@
-
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
 $black:   #000000 !default;
-
-
 
 $body-color: $black !default;
 $body-bg-color: #9cc29d !default;
 
+
 $margin-default: 0.5rem !default;
 
-$game-card-border-color: $black !default;
-$game-card-border-width: 5px !default;
-$game-card-height: 150px !default;
-$game-card-width: ($game-card-height * .75) !default;
+$game-group-card-border-width: 3px !default;
+$game-group-card-border-color: $body-color !default;
+$game-group-card-body-background: #b8e6b7 !default;
+$game-group-card-header-background:  #fffae4 !default;
 
+
+$game-card-border-color: $game-group-card-border-color !default;
+$game-card-border-width: 5px !default;
+$game-card-height: 12rem !default;
+$game-card-width: ($game-card-height * .75) !default;
 
 
 $game-card-colors:(
