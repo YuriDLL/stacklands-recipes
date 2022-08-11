@@ -1,7 +1,21 @@
 from flask import Flask, render_template
 from src.game_info import Cards, Recipes
+from flask_assets import Environment, Bundle
 
 app = Flask(__name__)
+
+assets = Environment(app)
+assets.url = app.static_url_path
+scss = Bundle('scss/index.scss',filters='pyscss', output='index.css')
+
+# css = Bundle(
+#     scss, 
+#     # 'css/anim_main.css',
+#     # 'css/style_main_page.css',
+#     filters='cssmin', 
+#     output='index.css')
+
+assets.register('css_all', scss)
 
 cards = Cards()
 recipes_list = Recipes(cards)

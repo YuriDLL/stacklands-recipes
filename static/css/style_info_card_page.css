@@ -106,34 +106,6 @@ tr{
     background-color: rgb(255, 250, 228);
 }
 
-/* карты */
-a {
-    display: block;
-    border: 5px solid black;
-    border-radius: 5px;
-    height: 150px;
-    width: 125px;
-    text-align: center;
-}
-
-a>img {
-    margin-top: 10px;
-    border-radius: 50%;
-}
-
-.name_card {
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 125px;
-}
-
-#card_line {
-    display: block;
-    background-color: black;
-    height: 5px;
-    width: 100%;
-}
-
 /*  */
 
 .card_count {

@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+    color: #000000; }
+    a:focus, a:active {
+      outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+
+    input, button, textarea {
+      font-family: inherit; }
+
+      input::-ms-clear {
+        display: none; }
+
+        button {
+          cursor: pointer; }
+
+          button::-moz-focus-inner {
+            padding: 0;
+            border: 0; }
+
+            ul li {
+              list-style: none; }
+
+              img {
+                vertical-align: top; }
+
+                h1, h2, h3, h4, h5, h6 {
+                  font-size: inherit;
+                  font-weight: 400; }
+
+                  .game-card-group {
+                    padding: 0.5rem; }
+                    .game-card-group .game-card {
+                      margin: 1rem; }
+
+.game-card {
+  border: 5px solid #000000;
+  border-radius: 5px;
+  height: 150px;
+  width: 112.5px;
+  text-align: center;
+  transition-duration: 0.2s;
+  padding: 0; }
+  .game-card:hover {
+    transform: scale(1.2); }
+    .game-card .game-card-header {
+      padding: 0.1rem;
+      font-size: 15px;
+      border-bottom: 5px solid #000000;
+      min-height: 37.5px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .game-card .game-card-body {
+        height: 105px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around; }
+        .game-card .game-card-body .game-card-icon {
+          border-radius: 50%;
+          border-width: 1px;
+          border-style: solid;
+          width: 78.75px;
+          height: 78.75px;
+          padding: 0.5rem; }
+
+.yellow-card {
+  background-color: #fffae4; }
+  .yellow-card .game-card-header {
+    color: #000000; }
+    .yellow-card .game-card-body .game-card-icon {
+      background-color: #f5e7b0;
+      border-color: #f5e7b0; }
+
+.red-card {
+  background-color: #d65b5b; }
+  .red-card .game-card-header {
+    color: #000000; }
+    .red-card .game-card-body .game-card-icon {
+      background-color: #e97676;
+      border-color: #e97676; }
+
+.pink-card {
+  background-color: #efb5a7; }
+  .pink-card .game-card-header {
+    color: #000000; }
+    .pink-card .game-card-body .game-card-icon {
+      background-color: #f59c87;
+      border-color: #f59c87; }
+
+.black-card {
+  background-color: #403f3a; }
+  .black-card .game-card-header {
+    color: #ffffff; }
+    .black-card .game-card-body .game-card-icon {
+      background-color: #5f5f59;
+      border-color: #5f5f59; }
+
+.gray-card {
+  background-color: #646f80; }
+  .gray-card .game-card-header {
+    color: #ffffff; }
+    .gray-card .game-card-body .game-card-icon {
+      background-color: #989faa;
+      border-color: #989faa; }
+
+.orange-card {
+  background-color: #e3934f; }
+  .orange-card .game-card-header {
+    color: #000000; }
+    .orange-card .game-card-body .game-card-icon {
+      background-color: #f3a765;
+      border-color: #f3a765; }
+
+.brown-card {
+  background-color: #906645; }
+  .brown-card .game-card-header {
+    color: #000000; }
+    .brown-card .game-card-body .game-card-icon {
+      background-color: #a78162;
+      border-color: #a78162; }
+
+.purple-card {
+  background-color: #b264b5; }
+  .purple-card .game-card-header {
+    color: white; }
+    .purple-card .game-card-body .game-card-icon {
+      background-color: #c682c8;
+      border-color: #c682c8; }
+
+.green-card {
+  background-color: #a9d780; }
+  .green-card .game-card-header {
+    color: #000000; }
+    .green-card .game-card-body .game-card-icon {
+      background-color: #6b9148;
+      border-color: #6b9148; }
+
+.gold-card {
+  background-color: #f4d997; }
+  .gold-card .game-card-header {
+    color: #000000; }
+    .gold-card .game-card-body .game-card-icon {
+      background-color: #f0c256;
+      border-color: #f0c256; }

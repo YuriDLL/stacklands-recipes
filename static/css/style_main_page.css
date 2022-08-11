@@ -5,7 +5,7 @@
 /* общий фон */
 body {
     font-family: 'Arial Rounded MT Bold';
-    background-color: rgb(156, 194, 157);
+    background-color: #9cc29d;
 }
 
 h1 {
@@ -59,46 +59,3 @@ h2{
     margin: 0px -3px 0px -3px;
 }
 
-/* карты*/
-a{
-    display: block;
-    margin-top: 20%;
-    border: 5px solid black;
-    border-radius: 5px;
-    /* background-color: rgb(255, 250, 228); */
-    height: 150px;
-    width: 125px;
-    text-align: center;
-}
-a img{
-    margin-top: 15px;
-    /* border: 1px solid rgb(245, 231, 176); */
-    border-radius: 50%;
-    /* background-color:rgb(245, 231, 176) ; */
-}
-
-.card_name{
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 125px;
-}
-.card_name>h6{
-    display: block;
-    background-color: black;
-    height: 5px;
-    width: 100%;
-}
-.blok_card{
-    display: block;
-    margin-left: 10px;
-    margin-top: 10px;
-    height: 180px;
-    width: 150px;
-    text-align: center;
-}
-.long_name{
-    font-size: 12px;
-    line-height: 25px;
-    font-weight: 125px;
-    color: aliceblue;
-}
