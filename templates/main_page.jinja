@@ -1,3 +1,5 @@
+{% from 'card.jinja' import card%}
+
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +19,8 @@
   <div class="wrapper">
     <div class="container">
       <header>
-        <div class="page-header">Stacklands recipices<div>
+        <div class="page-header-icon">Stacklands recipices<div>
+        <div class="page-header-text">Stacklands recipices<div>
       </header>
       <main class="page-body ">
         <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -33,21 +36,9 @@
             </h2>
             <div id="{{card_category}}-collapse" class="accordion-collapse collapse show" aria-labelledby="{{card_category}}">
                 <div class="accordion-body game-card-group-body">
-                  {% for card in cards[card_category] %}
 
-                  <!-- отрисовка карты -->
-                  <div class="game-card {{card_category}} {{ card['image_color'] }}-card">
-                    <a href="{{ card['url'] }}">
-                      <div class="game-card-header"> 
-                        <div>{{ card['name'] }}</div>
-                      </div>
-                      <div class="game-card-body">
-                        <img class="game-card-icon" src="{{ card['ico_url'] }}">
-                      </div>
-                    </a>
-                  </div>
-                  <!--  -->
-
+                  {% for c in cards[card_category] %}
+                    {{ card(card_category, c) }}
                   {% endfor %}
                 </div>
             </div>
