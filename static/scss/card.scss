@@ -69,10 +69,12 @@
     }
 }
 
-.Boosters {
+.booster-card {
     background: $black;
-    background: linear-gradient(35deg,$black,$black 31%, #4d4d4d 49%,#4d4d4d 54%,$black 72%,$black);
-    border: none;
+    background: linear-gradient(23deg,#616369,#333444 13%,#333444 49%,#333444 49%,#616368 65%,#333444 84%, #333444);
+    border: 2px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
     border-radius: 0;
     
     .game-card-header {
@@ -82,7 +84,8 @@
 
     .game-card-body {
         .game-card-icon {
-            border: none;
+            background-color: rgba(38, 38, 38, 30%);
+            border-color: transparent;
         }
     }
 
@@ -90,21 +93,22 @@
     &::after{
         content: "";
         position: absolute;
-        left: 0;
-        right: 0;
+        left: -5px;
+        right: -5px;
         background-repeat: repeat;
-        height: 10px;
-        background-size: 14px 20px;
+        height: 10px;    
+        z-index: 999;
+        background-size: 18px 20px;
     }
 
     &::before{
-        bottom: -9px;
-        background-image: radial-gradient(circle at 7px 1px,$black 7px,transparent 8px);
+        bottom: -6px;
+        background-image: radial-gradient(circle at 10px 12px,transparent 6px,black 7px, #000 11px,transparent 12px);
     }
 
     &::after{
-        top: -9px;
-        background-image: radial-gradient(circle at 7px 12px,$black 7px,transparent 8px);
+        top: -6px;
+        background-image: radial-gradient(circle at 10px -2px,transparent 6px,black 7px, #000 11px,transparent 12px);
     }
 }
 

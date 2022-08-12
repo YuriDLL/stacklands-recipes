@@ -1,6 +1,6 @@
-{% macro card(category, card) -%}
+{% macro card(card) -%}
 
-<div class="game-card {{category}} {{ card['image_color'] }}-card">
+<div class="game-card {{ card['image_color'] }}-card">
     <a href="{{ card['url'] }}">
         <div class="game-card-header"> 
         <div>{{ card['name'] }}</div>

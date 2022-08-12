@@ -52,6 +52,7 @@ class Cards(object):
                     BOOSTER_SUFFIX = '_booster'
                     prepare_image(card['image_name'], 'black', BOOSTER_SUFFIX)
                     card['image_name'] += BOOSTER_SUFFIX
+                    card['image_color'] = 'booster'
                 else:
                     prepare_image(name_key, card['image_color'])
         return cards

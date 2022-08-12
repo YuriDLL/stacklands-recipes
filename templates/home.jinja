@@ -19,7 +19,7 @@
 
                 {% from 'card.jinja' import card%}
                 {% for c in cards[card_category] %}
-                {{ card(card_category, c) }}
+                {{ card(c) }}
                 {% endfor %}
             </div>
         </div>
