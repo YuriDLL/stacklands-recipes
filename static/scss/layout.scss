@@ -1,0 +1,82 @@
+.game-card-group {
+
+    border: $game-group-card-border-width solid $game-group-card-border-color;
+
+    .game-card-group-header,
+    .game-card-group-body {}
+
+    .game-card-group-header {
+        cursor: pointer;
+        font-size: 3rem;
+        letter-spacing: -1px;
+        border-bottom: $game-group-card-border-width * 3 solid $game-group-card-border-color;
+        color: $body-color;
+
+        text-align: center;
+        background-color: $game-group-card-header-background;
+    }
+
+    .game-card-group-body {
+        padding: $margin-default;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $game-group-card-body-background;
+
+        &>* {
+            margin: $margin-default * 2.2;
+        }
+    }
+
+}
+
+
+.game-recepie-group {
+    .game-recepie-group-name {cursor: pointer;
+        font-size: 3rem;
+        letter-spacing: -1px;
+        border-bottom: $game-group-card-border-width * 3 solid $game-group-card-border-color;
+        color: $body-color;
+
+        text-align: center;
+        background-color: $game-group-card-header-background;}
+
+    .game-recepie-group-body {
+        .game-recepie-item {
+            border: $game-group-card-border-width solid $game-group-card-border-color;
+            display: flex;
+
+
+            .game-recepie-output,
+            .game-recepie-input {
+                padding: $margin-default;
+                display: flex;
+                flex-wrap: wrap; 
+                &>* {
+                    margin: $margin-default * 2.2;
+                }
+            }
+.game-recepie-arrow {    margin-left: auto;
+    margin-right: auto;
+
+   img {width: $game-card-width * 0.7;
+            height: $game-card-width * 0.7;}
+}
+            .game-recepie-card {
+                padding: 0;
+                position: relative;
+                .game-recepie-card-count {
+                    margin-top: $margin-default;
+                    margin-bottom: $margin-default;
+                    min-height: $game-card-height * 0.25;
+                    width: $game-card-width;
+                    font-size: 2rem;
+                    text-align: center;
+                    border: $game-card-border-width solid $game-card-border-color;
+                }
+            }
+        }
+
+    }
+
+
+}

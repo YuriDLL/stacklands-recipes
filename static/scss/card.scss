@@ -1,34 +1,3 @@
-.game-card-group {
-
-    .game-card-group-header,
-    .game-card-group-body {
-        border: $game-group-card-border-width solid $game-group-card-border-color;
-    }
-
-    .game-card-group-header {
-        cursor: pointer;
-        font-size: 3rem;
-        letter-spacing: -1px;
-        border-bottom: $game-group-card-border-width * 3 solid $game-group-card-border-color;
-        color: $body-color;
-
-        text-align: center;
-        background-color: $game-group-card-header-background;
-    }
-
-    .game-card-group-body {
-        padding: $margin-default;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: $game-group-card-body-background;
-
-        &>* {
-            margin: $margin-default * 2.2;
-        }
-    }
-
-}
-
 .game-card {
     border: $game-card-border-width solid $game-card-border-color;
     border-radius: $game-card-border-width;
@@ -71,12 +40,12 @@
 
 .booster-card {
     background: $black;
-    background: linear-gradient(23deg,#616369,#333444 13%,#333444 49%,#333444 49%,#616368 65%,#333444 84%, #333444);
+    background: linear-gradient(23deg, #616369, #333444 13%, #333444 49%, #333444 49%, #616368 65%, #333444 84%, #333444);
     border: 2px solid black;
     border-left: 5px solid black;
     border-right: 5px solid black;
     border-radius: 0;
-    
+
     .game-card-header {
         color: white;
         border: none;
@@ -90,43 +59,49 @@
     }
 
     &::before,
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         left: -5px;
         right: -5px;
         background-repeat: repeat;
-        height: 10px;    
+        height: 10px;
         z-index: 999;
         background-size: 18px 20px;
     }
 
-    &::before{
+    &::before {
         bottom: -6px;
-        background-image: radial-gradient(circle at 10px 12px,transparent 6px,black 7px, #000 11px,transparent 12px);
+        background-image: radial-gradient(circle at 10px 12px, transparent 6px, black 7px, #000 11px, transparent 12px);
     }
 
-    &::after{
+    &::after {
         top: -6px;
-        background-image: radial-gradient(circle at 10px -2px,transparent 6px,black 7px, #000 11px,transparent 12px);
+        background-image: radial-gradient(circle at 10px -2px, transparent 6px, black 7px, #000 11px, transparent 12px);
     }
 }
 
 @each $color in map-keys($map: $game-card-colors) {
-    .#{$color}-card {
-        $color-map: map-get($map: $game-card-colors, $key: #{$color});
 
+    $color-map: map-get($map: $game-card-colors, $key: #{$color});
+
+    $text-color: map-get($map: $color-map, $key:'color');
+
+
+    .#{$color}-card,
+    .#{$color}-card-count {
         background-color: map-get($map: $color-map, $key:'background');
+        color: $text-color;
+    }
 
+    .#{$color}-card {
         .game-card-header {
-            color: map-get($map: $color-map, $key:'color');
+            color: $text-color;
         }
 
-        .game-card-body {
-            .game-card-icon {
-                background-color: map-get($map: $color-map, $key:'icon');
-                border-color: map-get($map: $color-map, $key:'icon');
-            }
+        .game-card-icon {
+            background-color: map-get($map: $color-map, $key:'icon');
+            border-color: map-get($map: $color-map, $key:'icon');
         }
     }
 }
