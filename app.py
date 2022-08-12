@@ -23,7 +23,7 @@ recipes_list = Recipes(cards)
 
 @app.route('/')
 @app.route('/recipes')
-def main_page():
+def home_page():
     cards_by_category = {}
     for card in cards.iterate():
         category = card['category']
@@ -31,7 +31,7 @@ def main_page():
             cards_by_category[category].append(card)
         else:
             cards_by_category[category] = [card]
-    return render_template('main_page.jinja', cards=cards_by_category)
+    return render_template('home.jinja', cards=cards_by_category)
 
 
 @app.route('/recipes/<name>')
@@ -45,4 +45,4 @@ def recipes(name=None):
 
 
 if __name__ == '__main__':
-    main_page()
+    home_page()
