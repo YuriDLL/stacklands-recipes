@@ -12,3 +12,36 @@
 </div>
 
 {%- endmacro %}
+
+
+{% macro recipes_table(recipes) -%}
+
+{% for recepie in recipes %}
+    <div class="game-recepie-item">
+        <div class="game-recepie-input">
+
+        {% for c in recepie['inputs'] %}
+        <div class="game-recepie-card">
+            {{ card(c) }}
+            <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
+        </div>
+        {% endfor %}
+
+        </div>
+        <div class="game-recepie-arrow">
+        <img src={{ url_for('static', filename='img/arrow.png' ) }}>
+        </div>
+        <div class="game-recepie-output">
+
+        {% for c in recepie['outputs'] %}
+        <div class="game-recepie-card">
+            {{ card(c) }}
+            <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
+        </div>
+        {% endfor %}
+
+        </div>
+    </div>
+{% endfor %}
+
+{%- endmacro %}

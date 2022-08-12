@@ -1,6 +1,6 @@
 {% extends "page.jinja" %}
 
-{% from 'card.jinja' import card%}
+{% from 'card.jinja' import card, recipes_table%}
 
 {% block title %}Staclands recipices{% endblock %}
 
@@ -12,35 +12,7 @@
     <div class="game-recepie-group">
       <div class="game-recepie-group-name">Create form</div>
       <div class="game-recepie-group-body">
-
-        {% for recepie in create_recipes %}
-        <div class="game-recepie-item">
-          <div class="game-recepie-input">
-
-            {% for c in recepie['inputs'] %}
-            <div class="game-recepie-card">
-              {{ card(c) }}
-              <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
-            </div>
-            {% endfor %}
-
-          </div>
-          <div class="game-recepie-arrow">
-            <img src={{ url_for('static', filename='img/arrow.png' ) }}>
-          </div>
-          <div class="game-recepie-output">
-
-            {% for c in recepie['inputs'] %}
-            <div class="game-recepie-card">
-              {{ card(c) }}
-              <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
-            </div>
-            {% endfor %}
-
-          </div>
-        </div>
-        {% endfor %}
-
+        {{recipes_table(create_recipes)}}
       </div>
     </div>
     {% endif %}
@@ -50,35 +22,7 @@
     <div class="game-recepie-group">
       <div class="game-recepie-group-name">Use for</div>
       <div class="game-recepie-group-body">
-
-        {% for recepie in use_recipes %}
-        <div class="game-recepie-item">
-          <div class="game-recepie-input">
-
-            {% for c in recepie['inputs'] %}
-            <div class="game-recepie-card">
-              {{ card(c) }}
-              <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
-            </div>
-            {% endfor %}
-
-          </div>
-          <div class="game-recepie-arrow">
-            <img src={{ url_for('static', filename='img/arrow.png' ) }}>
-          </div>
-          <div class="game-recepie-output">
-
-            {% for c in recepie['inputs'] %}
-            <div class="game-recepie-card">
-              {{ card(c) }}
-              <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
-            </div>
-            {% endfor %}
-
-          </div>
-        </div>
-        {% endfor %}
-
+        {{recipes_table(create_recipes)}}
       </div>
     </div>
     {% endif %}
