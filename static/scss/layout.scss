@@ -31,16 +31,22 @@
 
 
 .game-recepie-group {
-    .game-recepie-group-name {cursor: pointer;
+    margin-bottom: $margin-default * 2.2;
+    border: $game-group-card-border-width solid $game-group-card-border-color;
+
+    .game-recepie-group-name {
+        padding: $margin-default * 2.2;
         font-size: 3rem;
         letter-spacing: -1px;
         border-bottom: $game-group-card-border-width * 3 solid $game-group-card-border-color;
         color: $body-color;
 
         text-align: center;
-        background-color: $game-group-card-header-background;}
+        background-color: $game-group-card-header-background;
+    }
 
     .game-recepie-group-body {
+        background-color: $game-group-card-body-background;
         .game-recepie-item {
             border: $game-group-card-border-width solid $game-group-card-border-color;
             display: flex;
@@ -50,20 +56,30 @@
             .game-recepie-input {
                 padding: $margin-default;
                 display: flex;
-                flex-wrap: wrap; 
+                flex-wrap: wrap;
+
                 &>* {
                     margin: $margin-default * 2.2;
                 }
             }
-.game-recepie-arrow {    margin-left: auto;
-    margin-right: auto;
+            .game-recepie-output {
+                justify-content: flex-end;
+            }
 
-   img {width: $game-card-width * 0.7;
-            height: $game-card-width * 0.7;}
-}
+            .game-recepie-arrow {
+                margin-left: auto;
+                margin-right: auto;
+
+                img {
+                    width: $game-card-width * 0.7;
+                    height: $game-card-width * 0.7;
+                }
+            }
+
             .game-recepie-card {
                 padding: 0;
                 position: relative;
+
                 .game-recepie-card-count {
                     margin-top: $margin-default;
                     margin-bottom: $margin-default;
