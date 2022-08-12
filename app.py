@@ -6,16 +6,16 @@ app = Flask(__name__)
 
 assets = Environment(app)
 assets.url = app.static_url_path
-scss = Bundle('scss/index.scss',filters='pyscss', output='index.css')
+scss = Bundle('scss/index.scss', filters='pyscss')
 
-# css = Bundle(
-#     scss, 
-#     # 'css/anim_main.css',
-#     # 'css/style_main_page.css',
-#     filters='cssmin', 
-#     output='index.css')
+css = Bundle(
+    scss, 
+    # 'css/anim_main.css',
+    # 'css/style_main_page.css',
+    filters='cssmin', 
+    output='generate/index.css')
 
-assets.register('css_all', scss)
+assets.register('css_all', css)
 
 cards = Cards()
 recipes_list = Recipes(cards)
