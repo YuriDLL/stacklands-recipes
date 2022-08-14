@@ -1,5 +1,4 @@
 import csv
-from dataclasses import dataclass
 from functools import cached_property
 from typing import Any, Dict, Iterable, List
 
@@ -52,30 +51,13 @@ class Cards(object):
                     BOOSTER_SUFFIX = '_booster'
                     prepare_image(card['image_name'], 'black', BOOSTER_SUFFIX)
                     card['image_name'] += BOOSTER_SUFFIX
+                    card['image_color'] = 'booster'
                 else:
                     prepare_image(name_key, card['image_color'])
         return cards
 
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
-
-
-@dataclass
-class Recipe:
-    inputs: Dict[str, int]
-    outputs: Dict[str, int]
-    time: int  # sec
-    place: str
-
-    def to_dict(self, cards: Cards) -> Dict:
-        return {
-            'inp': [cards.get_card(card) | {'count': count}
-                    for card, count in self.inputs.items()],
-            'out': [cards.get_card(card) | {'count': count}
-                    for card, count in self.outputs.items()],
-            'time': self.time,
-            'place': self.place
-        }
 
 
 class Recipes:
@@ -89,20 +71,14 @@ class Recipes:
         with open('data/recipes.yaml', 'r') as file:
             recipes_yaml.extend(YAML().load(file))
 
-        with open('data/boosters_drop.yaml', 'r') as file:
-            booster_out_yaml: dict = YAML().load(file)
-            for booster in booster_out_yaml:
-                recipes_yaml.extend(
-                    self._fill_recipe_booster(booster, card)
-                    for card in booster_out_yaml[booster]
-                )
-        with open('data/works.yaml', 'r') as file:
-            works_out_yaml: dict = YAML().load(file)
-            for factory in works_out_yaml:
-                recipes_yaml.extend(
-                    self._fill_recipe_work(factory, card)
-                    for card in works_out_yaml[factory]
-                )
+        with open('data/cards_drop.yaml', 'r') as file:
+            drops_yaml: dict = YAML().load(file)
+            recipes_yaml.extend(
+                self._fill_drops_recipe(drops_yaml)
+            )
+        with open('data/harvestable.yaml', 'r') as file:
+            harvestable_yaml: dict = YAML().load(file)
+            recipes_yaml.extend(self._fill_recipe_work(harvestable_yaml))
         return recipes_yaml
 
     def get_recipes(
@@ -129,16 +105,31 @@ class Recipes:
             'outputs': [self.cards.get_card(card) | {'count': count}
                         for card, count in recipe['out'].items()],
             'time': recipe['time'] if 'time' in recipe else None,
+            'chance': round(recipe['chance'] * 100)
+            if 'chance' in recipe else None,
         }
 
-    def _fill_recipe_booster(self, booster: str, card: str) -> dict:
-        return {
-            'inp': {booster: 1},
-            'out': {card: 1}
-        }
+    def _fill_drops_recipe(self, drops_yaml) -> list:
+        result = []
+        for main_card, drop_cards in drops_yaml.items():
+            for drop, chance in drop_cards.items():
+                result.append({
+                    'inp': {main_card: 1},
+                    'out': {drop: 1},
+                    'chance': chance,
+                })
+        return result
 
-    def _fill_recipe_work(self, factory: str, card: str) -> dict:
-        return {
-            'inp': {factory: 1, 'villager': 1},
-            'out': {card: 1}
-        }
+    def _fill_recipe_work(self,
+                          harvestable_yaml: Dict[str, Dict[str, Any]]) -> list:
+        recipes: List[Dict] = []
+        for harvestable, param in harvestable_yaml.items():
+            for card in param['cards']:
+                recipes.append({
+                    'inp': {harvestable: 1, 'villager': 1},
+                    'out': {card: 1},
+                    'chance': param['cards'][card],
+                    'time': param['time'],
+                })
+
+        return recipes

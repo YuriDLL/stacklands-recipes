@@ -1,0 +1,153 @@
+catacombs:
+  cards:
+    skeleton: 0.2
+    goblin: 0.2
+    wolf: 0.2
+    slime: 0.2
+    treasure_chest: 0.1
+    giant_rat: 0.1
+  time: 60
+forest:
+  cards:
+    berry_bush: 0.1081081
+    apple: 0.05405406
+    tree: 0.1081081
+    stick: 0.1621622
+    rabbit: 0.1081081
+    goblin: 0.05405406
+    bear: 0.05405406
+    mushroom: 0.1081081
+    catacombs: 0.08108108
+    treasure_chest: 0.05405406
+    apple_tree: 0.05405406
+    wolf: 0.05405406
+  time: 60
+graveyard:
+  cards:
+    bone: 0.125
+    soil: 0.25
+    skeleton: 0.125
+    treasure_chest: 0.25
+    corpse: 0.125
+    catacombs: 0.125
+  time: 60
+mountain:
+  cards:
+    rock: 0.125
+    iron_deposit: 0.25
+    bear: 0.0625
+    giant_rat: 0.0625
+    treasure_chest: 0.03125
+    catacombs: 0.03125
+  time: 60
+old_village:
+  cards:
+    coin: 0.1666667
+    villager: 0.08333334
+    wood: 0.1666667
+    corpse: 0.08333334
+    iron_bar: 0.08333334
+    catacombs: 0.04166667
+    slime: 0.08333334
+    treasure_chest: 0.08333334
+    old_tome: 0.04166667
+    goblin: 0.08333334
+    milk: 0.08333334
+  time: 60
+plains:
+  cards:
+    chicken: 0.1428571
+    mushroom: 0.07142857
+    wolf: 0.07142857
+    soil: 0.1428571
+    rat: 0.1428571
+    cow: 0.1428571
+    onion: 0.1428571
+    carrot: 0.07142857
+    milk: 0.07142857
+  time: 60
+apple_tree:
+  cards:
+    apple: 0.9
+    stick: 0.1
+  time: 10
+berry_bush:
+  cards:
+    berry: 0.990099
+    rabbit: 0.00990099
+  time: 10
+iron_deposit:
+  cards:
+    iron_ore: 0.7142857
+    stone: 0.1428571
+    coin: 0.1428571
+  time: 10
+rock:
+  cards:
+    stone: 0.7
+    coin: 0.1
+    flint: 0.2
+  time: 10
+tree:
+  cards:
+    wood: 0.625
+    apple: 0.125
+    stick: 0.25
+  time: 10
+cave:
+  cards:
+    goblin: 0.1428571
+    giant_rat: 0.1428571
+    rat: 0.1428571
+    pirate: 0.1428571
+    snake: 0.1428571
+    bear: 0.1428571
+    crab: 0.1428571
+    treasure_map: 0
+  time: 60
+jungle:
+  cards:
+    tiger: 0.1428571
+    cotton_plant: 0.0952381
+    banana: 0.1428571
+    monkey: 0.0952381
+    lime: 0.0952381
+    sugar_cane: 0.0952381
+    parrot: 0.1428571
+    baby: 0.04761905
+    old_tome: 0.04761905
+    wolf: 0.0952381
+  time: 30
+banana_tree:
+  cards:
+    banana: 1
+  time: 10
+cotton_plant:
+  cards:
+    cotton: 1
+  time: 10
+driftwood:
+  cards:
+    wood: 0.877193
+    stick: 0.0877193
+    plank: 0.01754386
+    bottle_of_rum: 0.01754386
+  time: 10
+fishing_spot:
+  cards:
+    cod: 1
+  time: 30
+gold_deposit:
+  cards:
+    gold_ore: 0.7142857
+    stone: 0.1428571
+    coin: 0.1428571
+  time: 10
+sand_quarry:
+  cards:
+    sand: 1
+  time: 10
+sugar_cane:
+  cards:
+    cane_sugar: 1
+  time: 10

@@ -1,0 +1,77 @@
+$black:   #000000 !default;
+
+$body-color: $black !default;
+$body-bg-color: #9cc29d !default;
+
+
+$margin-default: 0.5rem !default;
+
+$game-group-card-border-width: 3px !default;
+$game-group-card-border-color: $body-color !default;
+$game-group-card-body-background: #b8e6b7 !default;
+$game-group-card-header-background:  #fffae4 !default;
+
+
+$game-card-border-color: $game-group-card-border-color !default;
+$game-card-border-width: 5px !default;
+$game-card-height: 12rem !default;
+$game-card-width: ($game-card-height * .75) !default;
+
+
+$game-card-colors:(
+  "yellow":(
+    'background': #fffae4,
+    'icon': #f5e7b0,
+    'color': $body-color,
+  ),
+  "red":(
+    'background': #d65b5b,
+    'icon': #e97676,
+    'color': $body-color,
+  ),
+  "pink":(
+    'background': #efb5a7,
+    'icon': #f59c87,
+    'color': $body-color,
+  ),
+  "black":(
+    'background': #403f3a,
+    'icon': #5f5f59,
+    'color': #ffffff,
+  ),
+  "booster":(
+    'background': #403f3a,
+    'icon': #5f5f59,
+    'color': #ffffff,
+  ),
+  "gray":(
+    'background': #646f80,
+    'icon': #989faa,
+    'color': #ffffff,
+  ),
+  "orange":(
+    'background': #e3934f,
+    'icon': #f3a765,
+    'color': $body-color,
+  ),
+  "brown":(
+    'background': #906645,
+    'icon': #a78162,
+    'color': $body-color,
+  ),
+  "purple":(
+    'background': #b264b5,
+    'icon': #c682c8,
+    'color': white,
+  ),
+  "green":(
+    'background': #a9d780,
+    'icon': #6b9148,
+    'color': $body-color,
+  ),
+  "gold":(
+    'background': #f4d997,
+    'icon': #f0c256,
+    'color': $body-color,
+  ),
+);

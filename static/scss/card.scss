@@ -1,0 +1,107 @@
+.game-card {
+    border: $game-card-border-width solid $game-card-border-color;
+    border-radius: $game-card-border-width;
+    height: $game-card-height;
+    width: $game-card-width;
+    text-align: center;
+    transition-duration: 0.2s;
+    padding: 0;
+    position: relative;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    .game-card-header {
+        padding: 0.1rem;
+        font-size: 15px;
+        border-bottom: $game-card-border-width solid $game-card-border-color;
+        min-height: $game-card-height * 0.25;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .game-card-body {
+        height: $game-card-height * 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .game-card-icon {
+            border-radius: 50%;
+            border-width: 1px;
+            border-style: solid;
+            width: $game-card-width * 0.7;
+            height: $game-card-width * 0.7;
+            padding: $margin-default;
+        }
+    }
+}
+
+.booster-card {
+    background: $black;
+    background: linear-gradient(23deg, #616369, #333444 13%, #333444 49%, #333444 49%, #616368 65%, #333444 84%, #333444);
+    border: 2px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 0;
+
+    .game-card-header {
+        color: white;
+        border: none;
+    }
+
+    .game-card-body {
+        .game-card-icon {
+            background-color: rgba(38, 38, 38, 30%);
+            border-color: transparent;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        right: -5px;
+        background-repeat: repeat;
+        height: 10px;
+        z-index: 999;
+        background-size: 18px 20px;
+    }
+
+    &::before {
+        bottom: -6px;
+        background-image: radial-gradient(circle at 10px 12px, transparent 6px, black 7px, #000 11px, transparent 12px);
+    }
+
+    &::after {
+        top: -6px;
+        background-image: radial-gradient(circle at 10px -2px, transparent 6px, black 7px, #000 11px, transparent 12px);
+    }
+}
+
+@each $color in map-keys($map: $game-card-colors) {
+
+    $color-map: map-get($map: $game-card-colors, $key: #{$color});
+
+    $text-color: map-get($map: $color-map, $key:'color');
+
+
+    .#{$color}-card,
+    .#{$color}-card-count {
+        background-color: map-get($map: $color-map, $key:'background');
+        color: $text-color;
+    }
+
+    .#{$color}-card {
+        .game-card-header {
+            color: $text-color;
+        }
+
+        .game-card-icon {
+            background-color: map-get($map: $color-map, $key:'icon');
+            border-color: map-get($map: $color-map, $key:'icon');
+        }
+    }
+}

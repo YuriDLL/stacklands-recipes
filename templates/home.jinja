@@ -1,0 +1,30 @@
+{% extends "page.jinja" %}
+
+{% block title %}Staclands recipices{% endblock %}
+
+{% block content %}
+<div class="accordion" id="accordionPanelsStayOpenExample">
+
+    {% for card_category in cards %}
+    <div class="accordion-item game-card-group">
+        <h2 class="accordion-header" id="{{card_category}}">
+            <div class="accordion-button game-card-group-header" data-bs-toggle="collapse"
+                data-bs-target="#{{card_category}}-collapse" aria-expanded="true" aria-controls="{{card_category}}">
+                <h3>{{card_category}}</h3>
+            </div>
+        </h2>
+        <div id="{{card_category}}-collapse" class="accordion-collapse collapse"
+            aria-labelledby="{{card_category}}">
+            <div class="accordion-body game-card-group-body">
+
+                {% from 'card.jinja' import card%}
+                {% for c in cards[card_category] %}
+                {{ card(c) }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

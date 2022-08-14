@@ -1,15 +1,26 @@
 from flask import Flask, render_template
 from src.game_info import Cards, Recipes
+from flask_assets import Environment, Bundle
 
 app = Flask(__name__)
+
+assets = Environment(app)
+assets.url = app.static_url_path
+scss = Bundle('scss/index.scss', filters='pyscss')
+
+css = Bundle(
+    scss,
+    filters='cssmin',
+    output='generate/index.css')
+
+assets.register('css_all', css)
 
 cards = Cards()
 recipes_list = Recipes(cards)
 
 
 @app.route('/')
-@app.route('/recipes')
-def main_page():
+def home_page():
     cards_by_category = {}
     for card in cards.iterate():
         category = card['category']
@@ -17,10 +28,10 @@ def main_page():
             cards_by_category[category].append(card)
         else:
             cards_by_category[category] = [card]
-    return render_template('main_page.jinja', cards=cards_by_category)
+    return render_template('home.jinja', cards=cards_by_category)
 
 
-@app.route('/recipes/<name>')
+@app.route('/recipes/<name>/')
 def recipes(name=None):
     return render_template(
         'card_templ.jinja',
@@ -31,4 +42,4 @@ def recipes(name=None):
 
 
 if __name__ == '__main__':
-    main_page()
+    home_page()

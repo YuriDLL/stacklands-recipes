@@ -1,0 +1,250 @@
+# packs
+humble_beginnings:
+  tree: 0.277213
+  rock: 0.277213
+  berry_bush: 0.277213
+  soil: 0.277213
+  rabbit: 0.07496755
+  wood: 0.3941739
+  stone: 0.3941739
+  rat: 0.07496755
+  key: 0.07496755
+seeking_wisdom:
+  tree: 0.7037037
+  rock: 0.7037037
+  berry_bush: 0.7037037
+  wood: 0.2666667
+  stone: 0.2666667
+  stick: 0.1333333
+  flint: 0.1333333
+  poop: 0.1333333
+  coin: 0.06666667
+reap_and_sow:
+  berry: 0.25
+  apple: 0.25
+  carrot: 0.25
+  raw_meat: 0.25
+  rabbit: 0.25
+  cow: 0.25
+  chicken: 0.25
+  soil: 0.25
+  tree: 0.5555556
+  rock: 0.5555556
+  berry_bush: 0.5555556
+curious_cuisine:
+  onion: 0.2
+  egg: 0.2
+  milk: 0.2
+  potato: 0.2
+  mushroom: 0.2
+  tree: 0.3333333
+  rock: 0.3333333
+  berry_bush: 0.3333333
+  berry: 0.25
+  apple: 0.25
+  carrot: 0.25
+  raw_meat: 0.25
+logic_and_reason:
+  tree: 0.7037037
+  rock: 0.7037037
+  berry_bush: 0.7037037
+  brick: 0.3333333
+  plank: 0.3333333
+  iron_ore: 0.3333333
+explorers:
+  tree: 0.3333333
+  rock: 0.3333333
+  berry_bush: 0.3333333
+  giant_rat: 0.2
+  bear: 0.2
+  skeleton: 0.2
+  wolf: 0.2
+  slime: 0.2
+  forest: 0.25
+  mountain: 0.25
+  plains: 0.25
+  old_village: 0.25
+order_and_structure:
+  iron_deposit: 1
+  tree: 0.5555556
+  rock: 0.5555556
+  berry_bush: 0.5555556
+  brick: 0.3333333
+  plank: 0.3333333
+  iron_ore: 0.3333333
+on_the_shore:
+  driftwood: 0.407296
+  sand: 0.407296
+  flint: 0.318528
+  banana_tree: 0.221312
+  fishing_spot: 0.407296
+  monkey: 0.115264
+  seagull: 0.115264
+  cotton_plant: 0.318528
+  banana: 0.221312
+  seaweed: 0.115264
+island_of_ideas:
+  fishing_spot: 0.25
+  cotton_plant: 0.25
+  banana_tree: 0.25
+  driftwood: 0.4375
+  sand: 0.25
+  flint: 0.25
+  seaweed: 0.25
+grilling_and_brewing:
+  chili_pepper: 0.3333333
+  raw_crab_meat: 0.3333333
+  lime: 0.3333333
+  crab: 0.3333333
+  monkey: 0.3333333
+  parrot: 0.3333333
+  fishing_spot: 0.25
+  cotton_plant: 0.25
+  banana_tree: 0.25
+  driftwood: 0.25
+  banana: 0.3333333
+  bottle_of_rum: 0.3333333
+  raw_meat: 0.3333333
+island_insights:
+  fishing_spot: 0.4375
+  cotton_plant: 0.4375
+  banana_tree: 0.4375
+  driftwood: 0.4375
+  glass: 0.2
+  gold_bar: 0.2
+  iron_bar: 0.2
+  cane_sugar: 0.2
+  sandstone: 0.2
+  chili_pepper: 0.3333333
+  raw_crab_meat: 0.3333333
+  lime: 0.3333333
+advanced_archipelago:
+  seagull: 0.25
+  snake: 0.25
+  tiger: 0.25
+  skeleton: 0.25
+  spring: 0.25
+  sugar_cane: 0.25
+  gold_deposit: 0.25
+  iron_deposit: 0.25
+  glass: 0.36
+  gold_bar: 0.36
+  iron_bar: 0.36
+  cane_sugar: 0.36
+  sandstone: 0.36
+enclave_explorers:
+  spring: 0.25
+  sugar_cane: 0.25
+  gold_deposit: 0.25
+  iron_deposit: 0.25
+  seagull: 0.25
+  snake: 0.25
+  tiger: 0.25
+  skeleton: 0.25
+  jungle: 0.25
+  mountain: 0.25
+  cave: 0.25
+  old_village: 0.25
+  glass: 0.2
+  gold_bar: 0.2
+  iron_bar: 0.2
+  cane_sugar: 0.2
+  sandstone: 0.2
+
+# mobs
+
+chicken:
+  raw_meat: 0.25
+  egg: 0.25
+  poop: 0.25
+  bone: 0.25
+cow:
+  raw_meat: 0.25
+  milk: 0.25
+  poop: 0.25
+  bone: 0.25
+rabbit:
+  raw_meat: 0.25
+  carrot: 0.25
+  poop: 0.25
+  bone: 0.25
+bear:
+  raw_meat: 0.3333333
+  poop: 0.3333333
+  bone: 0.3333333
+demon:
+  coin: 1
+giant_rat:
+  raw_meat: 0.3333333
+  poop: 0.3333333
+  bone: 0.3333333
+goblin:
+  coin: 0.5357143
+  raw_meat: 0.07142857
+  spear: 0.03571429
+  key: 0.03571429
+  map: 0.03571429
+  poop: 0.2857143
+rat:
+  raw_meat: 0.25
+  coin: 0.25
+  poop: 0.25
+  bone: 0.25
+skeleton:
+  coin: 0.5
+  spear: 0.125
+  bone: 0.25
+  key: 0.125
+slime:
+  small_slime: 1
+small_slime:
+  coin: 0.4
+  egg: 0.2
+  onion: 0.2
+  key: 0.2
+wolf:
+  raw_meat: 0.3333333
+  bone: 0.3333333
+  poop: 0.3333333
+crab:
+  raw_crab_meat: 1
+monkey:
+  raw_meat: 0.25
+  banana: 0.25
+  poop: 0.25
+  bone: 0.25
+parrot:
+  raw_meat: 0.3333333
+  poop: 0.3333333
+  bone: 0.3333333
+demon_lord:
+  coin: 1
+kraken:
+  raw_meat: 1
+momma_crab:
+  raw_crab_meat: 0.6521739
+  poop: 0.3478261
+pirate:
+  coin: 0.6
+  key: 0.04
+  map: 0.04
+  poop: 0.32
+seagull:
+  raw_meat: 1
+snake:
+  raw_meat: 1
+tentacle:
+  raw_meat: 1
+tiger:
+  raw_meat: 0.6521739
+  poop: 0.3478261
+cod:
+  raw_fish: 1
+eel:
+  raw_fish: 1
+mackerel:
+  raw_fish: 1
+shark:
+  raw_fish: 1
+tuna:
+  raw_fish: 1
