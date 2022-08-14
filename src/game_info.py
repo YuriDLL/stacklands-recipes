@@ -94,8 +94,8 @@ class Recipes:
             booster_out_yaml: dict = YAML().load(file)
             for booster in booster_out_yaml:
                 recipes_yaml.extend(
-                    self._fill_recipe_booster(booster, card)
-                    for card in booster_out_yaml[booster]
+                    self._fill_recipe_booster(booster, card, chance)
+                    for card, chance in booster_out_yaml[booster].items()
                 )
         with open('data/works.yaml', 'r') as file:
             works_out_yaml: dict = YAML().load(file)
@@ -130,12 +130,17 @@ class Recipes:
             'outputs': [self.cards.get_card(card) | {'count': count}
                         for card, count in recipe['out'].items()],
             'time': recipe['time'] if 'time' in recipe else None,
+            'chance': recipe['chance'] if 'chance' in recipe else None,
         }
 
-    def _fill_recipe_booster(self, booster: str, card: str) -> dict:
+    def _fill_recipe_booster(
+            self, booster: str,
+            card: str,
+            chance: float) -> dict:
         return {
             'inp': {booster: 1},
-            'out': {card: 1}
+            'out': {card: 1},
+            'chance': round(chance*100),
         }
 
     def _fill_recipe_work(self, factory: str, card: str) -> dict:

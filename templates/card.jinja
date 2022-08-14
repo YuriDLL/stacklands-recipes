@@ -40,6 +40,12 @@
         </div>
         {% endfor %}
 
+        {% if recepie['chance'] %}
+        <div class="game-recepie-card">
+            <div class="game-recepie-card-count black-card-count">{{recepie['chance']}}%</div>
+        </div>
+        {%endif%}
+
         </div>
     </div>
 {% endfor %}
