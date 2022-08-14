@@ -113,7 +113,7 @@ island_insights:
   glass: 0.2
   gold_bar: 0.2
   iron_bar: 0.2
-  sugar: 0.2
+  cane_sugar: 0.2
   sandstone: 0.2
   chili_pepper: 0.3333333
   raw_crab_meat: 0.3333333
@@ -130,7 +130,7 @@ advanced_archipelago:
   glass: 0.36
   gold_bar: 0.36
   iron_bar: 0.36
-  sugar: 0.36
+  cane_sugar: 0.36
   sandstone: 0.36
 enclave_explorers:
   spring: 0.25
@@ -148,5 +148,103 @@ enclave_explorers:
   glass: 0.2
   gold_bar: 0.2
   iron_bar: 0.2
-  sugar: 0.2
+  cane_sugar: 0.2
   sandstone: 0.2
+
+# mobs
+
+chicken:
+  raw_meat: 0.25
+  egg: 0.25
+  poop: 0.25
+  bone: 0.25
+cow:
+  raw_meat: 0.25
+  milk: 0.25
+  poop: 0.25
+  bone: 0.25
+rabbit:
+  raw_meat: 0.25
+  carrot: 0.25
+  poop: 0.25
+  bone: 0.25
+bear:
+  raw_meat: 0.3333333
+  poop: 0.3333333
+  bone: 0.3333333
+demon:
+  coin: 1
+giant_rat:
+  raw_meat: 0.3333333
+  poop: 0.3333333
+  bone: 0.3333333
+goblin:
+  coin: 0.5357143
+  raw_meat: 0.07142857
+  spear: 0.03571429
+  key: 0.03571429
+  map: 0.03571429
+  poop: 0.2857143
+rat:
+  raw_meat: 0.25
+  coin: 0.25
+  poop: 0.25
+  bone: 0.25
+skeleton:
+  coin: 0.5
+  spear: 0.125
+  bone: 0.25
+  key: 0.125
+slime:
+  small_slime: 1
+small_slime:
+  coin: 0.4
+  egg: 0.2
+  onion: 0.2
+  key: 0.2
+wolf:
+  raw_meat: 0.3333333
+  bone: 0.3333333
+  poop: 0.3333333
+crab:
+  raw_crab_meat: 1
+monkey:
+  raw_meat: 0.25
+  banana: 0.25
+  poop: 0.25
+  bone: 0.25
+parrot:
+  raw_meat: 0.3333333
+  poop: 0.3333333
+  bone: 0.3333333
+demon_lord:
+  coin: 1
+kraken:
+  raw_meat: 1
+momma_crab:
+  raw_crab_meat: 0.6521739
+  poop: 0.3478261
+pirate:
+  coin: 0.6
+  key: 0.04
+  map: 0.04
+  poop: 0.32
+seagull:
+  raw_meat: 1
+snake:
+  raw_meat: 1
+tentacle:
+  raw_meat: 1
+tiger:
+  raw_meat: 0.6521739
+  poop: 0.3478261
+cod:
+  raw_fish: 1
+eel:
+  raw_fish: 1
+mackerel:
+  raw_fish: 1
+shark:
+  raw_fish: 1
+tuna:
+  raw_fish: 1

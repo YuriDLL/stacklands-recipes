@@ -1,38 +1,38 @@
-name,health,image_color
-Baby,,yellow
-Dog,3,yellow
-Explorer,3,yellow
-Fisher,5,yellow
-Frendly Pirate,5,yellow
-Militia,6,yellow
-Swordman,7,yellow
-Trained Monkey,2,yellow
-Villager,5,yellow
-Bear,10,red
-Chicken,2,brown
-Cow,5,brown
-Crab,2,brown
-Demon,99,red
-Demon Lord,666,red
-Giant Rat,12,red
-Goblin,5,red
-Kraken,150,red
-Momma Crab,50,red
-Monkey,2,brown
-Parrot,2,brown
-Pirate,3,red
-Rabbit,2,brown
-Rat,3,red
-Seagull,3,red
-Skeleton,5,red
-Slime,8,red
-Small Slime,2,red
-Snake,3,red
-Tentacle,50,red
-Tiger,5,red
-Wolf,10,red
-Cod,1,green
-Eel,3,green
-Mackerel,2,green
-Shark,8,green
-Tuna,3,green
+name,health,drop_coint,image_color
+Baby,,,yellow
+Dog,3,1,yellow
+Explorer,3,1,yellow
+Fisher,5,1,yellow
+Frendly Pirate,5,1,yellow
+Militia,6,1,yellow
+Swordman,7,1,yellow
+Trained Monkey,2,1,yellow
+Villager,5,1,yellow
+Bear,10,1,red
+Chicken,2,1,brown
+Cow,5,1,brown
+Crab,2,1,brown
+Demon,99,1,red
+Demon Lord,666,1,red
+Giant Rat,12,1,red
+Goblin,5,2,red
+Kraken,150,1,red
+Momma Crab,50,3,red
+Monkey,2,1,brown
+Parrot,2,1,brown
+Pirate,3,2,red
+Rabbit,2,1,brown
+Rat,3,1,red
+Seagull,3,1,red
+Skeleton,5,1,red
+Slime,8,3,red
+Small Slime,2,1,red
+Snake,3,1,red
+Tentacle,50,1,red
+Tiger,5,1,red
+Wolf,10,1,red
+Cod,1,1,green
+Eel,3,2,green
+Mackerel,2,2,green
+Shark,8,3,green
+Tuna,3,3,green

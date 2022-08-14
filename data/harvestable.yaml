@@ -149,5 +149,5 @@ sand_quarry:
   time: 10
 sugar_cane:
   cards:
-    sugar: 1
+    cane_sugar: 1
   time: 10

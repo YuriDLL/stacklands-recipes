@@ -1,5 +1,4 @@
 import csv
-from dataclasses import dataclass
 from functools import cached_property
 from typing import Any, Dict, Iterable, List
 
@@ -60,6 +59,7 @@ class Cards(object):
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
 
+
 class Recipes:
 
     def __init__(self, cards: Cards) -> None:
@@ -71,13 +71,11 @@ class Recipes:
         with open('data/recipes.yaml', 'r') as file:
             recipes_yaml.extend(YAML().load(file))
 
-        with open('data/boosters_drop.yaml', 'r') as file:
-            booster_out_yaml: dict = YAML().load(file)
-            for booster in booster_out_yaml:
-                recipes_yaml.extend(
-                    self._fill_recipe_booster(booster, card, chance)
-                    for card, chance in booster_out_yaml[booster].items()
-                )
+        with open('data/cards_drop.yaml', 'r') as file:
+            drops_yaml: dict = YAML().load(file)
+            recipes_yaml.extend(
+                self._fill_drops_recipe(drops_yaml)
+            )
         with open('data/harvestable.yaml', 'r') as file:
             harvestable_yaml: dict = YAML().load(file)
             recipes_yaml.extend(self._fill_recipe_work(harvestable_yaml))
@@ -111,15 +109,16 @@ class Recipes:
             if 'chance' in recipe else None,
         }
 
-    def _fill_recipe_booster(
-            self, booster: str,
-            card: str,
-            chance: float) -> dict:
-        return {
-            'inp': {booster: 1},
-            'out': {card: 1},
-            'chance': chance,
-        }
+    def _fill_drops_recipe(self, drops_yaml) -> list:
+        result = []
+        for main_card, drop_cards in drops_yaml.items():
+            for drop, chance in drop_cards.items():
+                result.append({
+                    'inp': {main_card: 1},
+                    'out': {drop: 1},
+                    'chance': chance,
+                })
+        return result
 
     def _fill_recipe_work(self,
                           harvestable_yaml: Dict[str, Dict[str, Any]]) -> list:
