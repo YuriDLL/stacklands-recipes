@@ -1,209 +1,594 @@
 # ideas
 
 -
-  inp: {plank: 2, wood: 2, iron_bar: 1, villager: 1}
-  out: {animal_pen: 1}
--
-  inp: {glass: 2, iron_bar: 1, villager: 1}
-  out: {aquarium: 1}
--
-  inp: {distillery: 1, cane_sugar: 1, bottle_of_water: 1}
-  out: {bottle_of_rum: 1}
--
-  inp: {stone: 3, villager: 1}
-  out: {brick: 1}
--
-  inp: {brick: 1, iron_bar: 1, wood: 1, villager: 1}
-  out: {brickyard: 1}
--
-  inp: {stick: 1, flint: 1}
-  out: {campfire: 1}
--
-  inp:
-    gold_bar: 5
-    glass: 5
-    brick: 5
-    plank: 5
-    villager: 5
-  out: {cathedral: 1}
--
-  inp: {lime: 1, raw_fish: 1}
-  out: {ceviche: 1}
--
-  inp: {campfire: 1, wood: 1}
-  out: {charcoal: 1}
--
-  inp: {chicken: 1, egg: 1}
-  out: {chicken: 1}
--
-  inp: {smelter: 1, gold_bar: 1, wood: 1}
-  out: {coin: 1}
--
-  inp: {coin: 1, wood: 2}
-  out: {coin_chest: 1}
--
-  inp: {poop: 2, plank: 1, brick: 1, villager: 1}
-  out: {composter: 1}
--
-  inp: {campfire: 1, raw_meat: 1}
-  out: {cooked_meat: 1}
--
-  inp: {stove: 1, iron_bar: 1, plank: 1, villager: 1}
-  out: {distillery: 1}
--
-  inp: {campfire: 1, glass: 2}
-  out: {empty_bottle: 1}
--
-  inp: {cotton: 4, villager: 1}
-  out: {fabric: 1}
--
-  inp: {soil: 1, brick: 2, plank: 2, villager: 1}
-  out: {farm: 1}
--
-  inp: {fishing_spot: 1, stone: 1, rope: 1}
-  out: {fish_trap: 1}
--
-  inp: {stick: 1, rope: 1}
-  out: {fish_rod: 1}
--
-  inp: {plank: 10, sail: 3, villager: 2}
-  out: {frigate: 1}
--
-  inp: {campfire: 1, egg: 1, potato: 1}
-  out: {frittata: 1}
--
-  inp: {apple: 1, berry: 1}
-  out: {fruit_salad: 1}
--
-  inp: {soil: 1, stone: 2, wood: 2, villager: 1}
-  out: {garden: 1}
--
-  inp: {smelter: 1, wood: 1, sand: 1}
-  out: {glass: 1}
--
-  inp: {smelter: 1, wood: 1, gold_ore: 1}
-  out: {gold_bar: 1}
--
-  inp: {flint: 1, gold_ore: 1, wood: 1, stone: 1, villager: 1}
-  out: {gold_mine: 1}
--
-  inp: {iron_bar: 2, glass: 2, soil: 1, villager: 1}
-  out: {greenhouse: 1}
--
-  inp: {berry: 1, soil: 1}
-  out: {berry_bush: 1}
--
-  inp: {wood: 2, stone: 1, villager: 1}
-  out: {house: 1}
--
-  inp: {smelter: 1, wood: 1, iron_ore: 1}
-  out: {iron_bar: 1}
--
-  inp: {flint: 2, wood: 1, stone: 1, villager: 1}
-  out: {iron_mine: 1}
--
-  inp: {wood: 3, stone: 1, villager: 1}
-  out: {lumber_camp: 1}
--
-  inp: {brick: 1, plank: 1, coin: 3, villager: 1}
-  out: {market: 1}
--
-  inp: {plank: 1, iron_bar: 1, campfire: 1}
-  out: {mess_hall: 1}
--
-  inp: {milk: 1, berry: 1}
-  out: {milkshake: 1}
--
-  inp: {house: 1, villager: 2}
-  out: {baby: 1}
--
-  inp: {campfire: 1, egg: 2}
-  out: {omelette: 1}
--
-  inp: {wood: 3, villager: 1}
-  out: {plank: 1}
--
-  inp: {stone: 3, wood: 1, villager: 1}
-  out: {quarry: 1}
--
-  inp: {cotton: 2, villager: 1}
-  out: {rope: 1}
--
-  inp: {plank: 1, iron_bar: 1}
-  out: {rowboat: 1}
--
-  inp: {smelter: 1, gold_bar: 3, glass: 3}
-  out: {sacred_key: 1}
--
-  inp: {fabric: 1, rope: 1, villager: 1}
-  out: {sail: 1}
--
-  inp: {villager: 1, sand: 1, flint: 1, wood: 1}
-  out: {sand_quarry: 1}
--
-  inp: {sand: 2, villager: 1}
-  out: {sandstone: 1}
--
-  inp: {plank: 1, wood: 1, stone: 1, iron_bar: 1, villager: 1}
-  out: {sawmill: 1}
--
-  inp: {campfire: 1, raw_crab_meat: 1, raw_fish: 1, chili_pepper: 1}
-  out: {seafood_stew: 1}
--
-  inp: {wood: 1, stone: 1, stick: 1, villager: 1}
-  out: {shed: 1}
--
-  inp: {shell: 1, wood: 2}
-  out: {shell_chest: 1}
--
-  inp: {plank: 2, sail: 1, villager: 1}
-  out: {sloop: 1}
--
-  inp: {flint: 2, brick: 2, plank: 1, villager: 1}
-  out: {smelter: 1}
--
-  inp: {wood: 1, stick: 2}
-  out: {spear: 1}
--
-  inp: {campfire: 1, potato: 1, raw_meat: 1, onion: 1, carrot: 1}
-  out: {stew: 1}
--
-  inp: {wood: 1, villager: 1}
-  out: {stick: 1}
--
-  inp: {brick: 1, iron_bar: 1, flint: 1, villager: 1}
-  out: {stove: 1}
--
-  inp: {raw_fish: 1, seaweed: 1}
-  out: {sushi: 1}
--
-  inp: {iron_bar: 1, stick: 2}
-  out: {sword: 1}
--
-  inp: {omelette: 1, seaweed: 1}
-  out: {tamago_sushi: 1}
--
-  inp: {plank: 5, brick: 5, iron_bar: 3, villager: 1}
-  out: {temple: 1}
--
-  inp: {stone: 1, iron_bar: 1, villager: 1}
-  out: {warehouse: 1}
-
--
-  inp: {spring: 1, empty_bottle: 1}
-  out: {bottle_of_water: 1}
-
--
-  inp: {corpse: 2}
+  inp: {corpse: 2, }
   out: {graveyard: 1}
-
+  time: 15
 -
-  inp: {house: 1, baby: 1}
-  out: {villager: 1}
-
+  inp: {map: 1, villager: 1, }
+  out: {explorer: 1}
+  time: 10
 -
-  inp: {temple: 1, golden_goblet: 1}
-  out: {demon: 1}
+  inp: {plank: 2, wood: 2, iron_bar: 1, villager: 1, }
+  out: {animal_pen: 1}
+  time: 30
+-
+  inp: {stone: 3, villager: 1, }
+  out: {brick: 1}
+  time: 30
+-
+  inp: {brick: 1, iron_bar: 1, wood: 1, villager: 1, }
+  out: {brickyard: 1}
+  time: 30
+-
+  inp: {stick: 1, flint: 1, }
+  out: {campfire: 1}
+  time: 30
+-
+  inp: {wood: 1, villager: 1, }
+  out: {stick: 1}
+  time: 10
+-
+  inp: {chicken: 1, egg: 1, }
+  out: {chicken: 1}
+  time: 120
+-
+  inp: {chicken: 1, egg: 1, animal_pen: 1, }
+  out: {chicken: 1}
+  time: 120
+-
+  inp: {coin: 1, wood: 2, }
+  out: {coin_chest: 1}
+  time: 10
+-
+  inp: {campfire: 1, raw_meat: 1, }
+  out: {cooked_meat: 1, }
+  time: 60
+-
+  inp: {stove: 1, raw_meat: 1, }
+  out: {cooked_meat: 1, }
+  time: 18
+-
+  inp: {soil: 1, brick: 2, plank: 2, villager: 1, }
+  out: {farm: 1}
+  time: 30
+-
+  inp: {garden: 1, brick: 2, plank: 2, villager: 1, }
+  out: {farm: 1}
+  time: 30
+-
+  inp: {campfire: 1, egg: 1, potato: 1, }
+  out: {frittata: 1, }
+  time: 60
+-
+  inp: {stove: 1, egg: 1, potato: 1, }
+  out: {frittata: 1, }
+  time: 18
+-
+  inp: {apple: 1, berry: 1, }
+  out: {fruit_salad: 1}
+  time: 10
+-
+  inp: {soil: 1, stone: 2, wood: 2, villager: 1, }
+  out: {garden: 1}
+  time: 30
+-
+  inp: {berry: 1, soil: 1, }
+  out: {berry_bush: 1, }
+  time: 120
+-
+  inp: {berry: 1, poop: 1, }
+  out: {berry_bush: 1, }
+  time: 120
+-
+  inp: {berry: 1, garden: 1, }
+  out: {berry_bush: 1, }
+  time: 90
+-
+  inp: {berry: 1, farm: 1, }
+  out: {berry_bush: 1, }
+  time: 60
+-
+  inp: {berry: 1, greenhouse: 1, }
+  out: {berry_bush: 1, }
+  time: 60
+-
+  inp: {apple: 1, soil: 1, }
+  out: {apple_tree: 1, }
+  time: 120
+-
+  inp: {apple: 1, poop: 1, }
+  out: {apple_tree: 1, }
+  time: 120
+-
+  inp: {apple: 1, garden: 1, }
+  out: {apple_tree: 1, }
+  time: 90
+-
+  inp: {apple: 1, farm: 1, }
+  out: {apple_tree: 1, }
+  time: 60
+-
+  inp: {apple: 1, greenhouse: 1, }
+  out: {apple_tree: 1, }
+  time: 60
+-
+  inp: {carrot: 1, soil: 1, }
+  out: {carrot: 2, }
+  time: 180
+-
+  inp: {carrot: 1, poop: 1, }
+  out: {carrot: 2, }
+  time: 180
+-
+  inp: {carrot: 1, garden: 1, }
+  out: {carrot: 2, }
+  time: 135
+-
+  inp: {carrot: 1, farm: 1, }
+  out: {carrot: 2, }
+  time: 90
+-
+  inp: {carrot: 1, greenhouse: 1, }
+  out: {carrot: 2, }
+  time: 90
+-
+  inp: {onion: 1, soil: 1, }
+  out: {onion: 2, }
+  time: 120
+-
+  inp: {onion: 1, poop: 1, }
+  out: {onion: 2, }
+  time: 120
+-
+  inp: {onion: 1, garden: 1, }
+  out: {onion: 2, }
+  time: 90
+-
+  inp: {onion: 1, farm: 1, }
+  out: {onion: 2, }
+  time: 60
+-
+  inp: {onion: 1, greenhouse: 1, }
+  out: {onion: 2, }
+  time: 60
+-
+  inp: {potato: 1, soil: 1, }
+  out: {potato: 2, }
+  time: 120
+-
+  inp: {potato: 1, poop: 1, }
+  out: {potato: 2, }
+  time: 120
+-
+  inp: {potato: 1, garden: 1, }
+  out: {potato: 2, }
+  time: 90
+-
+  inp: {potato: 1, farm: 1, }
+  out: {potato: 2, }
+  time: 60
+-
+  inp: {potato: 1, greenhouse: 1, }
+  out: {potato: 2, }
+  time: 60
+-
+  inp: {mushroom: 1, soil: 1, }
+  out: {mushroom: 2, }
+  time: 120
+-
+  inp: {mushroom: 1, poop: 1, }
+  out: {mushroom: 2, }
+  time: 120
+-
+  inp: {mushroom: 1, garden: 1, }
+  out: {mushroom: 2, }
+  time: 90
+-
+  inp: {mushroom: 1, farm: 1, }
+  out: {mushroom: 2, }
+  time: 60
+-
+  inp: {mushroom: 1, greenhouse: 1, }
+  out: {mushroom: 2, }
+  time: 60
+-
+  inp: {banana: 1, soil: 1, }
+  out: {banana_tree: 1, }
+  time: 120
+-
+  inp: {banana: 1, poop: 1, }
+  out: {banana_tree: 1, }
+  time: 120
+-
+  inp: {banana: 1, garden: 1, }
+  out: {banana_tree: 1, }
+  time: 90
+-
+  inp: {banana: 1, farm: 1, }
+  out: {banana_tree: 1, }
+  time: 60
+-
+  inp: {banana: 1, greenhouse: 1, }
+  out: {banana_tree: 1, }
+  time: 60
+-
+  inp: {cotton: 1, soil: 1, }
+  out: {cotton_plant: 1, }
+  time: 120
+-
+  inp: {cotton: 1, poop: 1, }
+  out: {cotton_plant: 1, }
+  time: 120
+-
+  inp: {cotton: 1, garden: 1, }
+  out: {cotton_plant: 1, }
+  time: 90
+-
+  inp: {cotton: 1, farm: 1, }
+  out: {cotton_plant: 1, }
+  time: 60
+-
+  inp: {cotton: 1, greenhouse: 1, }
+  out: {cotton_plant: 1, }
+  time: 60
+-
+  inp: {lime: 1, soil: 1, }
+  out: {lime: 2, }
+  time: 180
+-
+  inp: {lime: 1, poop: 1, }
+  out: {lime: 2, }
+  time: 180
+-
+  inp: {lime: 1, garden: 1, }
+  out: {lime: 2, }
+  time: 135
+-
+  inp: {lime: 1, farm: 1, }
+  out: {lime: 2, }
+  time: 90
+-
+  inp: {lime: 1, greenhouse: 1, }
+  out: {lime: 2, }
+  time: 90
+-
+  inp: {chili_pepper: 1, soil: 1, }
+  out: {chili_pepper: 2, }
+  time: 120
+-
+  inp: {chili_pepper: 1, poop: 1, }
+  out: {chili_pepper: 2, }
+  time: 120
+-
+  inp: {chili_pepper: 1, garden: 1, }
+  out: {chili_pepper: 2, }
+  time: 90
+-
+  inp: {chili_pepper: 1, farm: 1, }
+  out: {chili_pepper: 2, }
+  time: 60
+-
+  inp: {chili_pepper: 1, greenhouse: 1, }
+  out: {chili_pepper: 2, }
+  time: 60
+-
+  inp: {seaweed: 1, soil: 1, }
+  out: {seaweed: 2, }
+  time: 120
+-
+  inp: {seaweed: 1, poop: 1, }
+  out: {seaweed: 2, }
+  time: 120
+-
+  inp: {seaweed: 1, garden: 1, }
+  out: {seaweed: 2, }
+  time: 90
+-
+  inp: {seaweed: 1, farm: 1, }
+  out: {seaweed: 2, }
+  time: 60
+-
+  inp: {seaweed: 1, greenhouse: 1, }
+  out: {seaweed: 2, }
+  time: 60
+-
+  inp: {cane_sugar: 1, soil: 1, }
+  out: {sugar_cane: 1, }
+  time: 120
+-
+  inp: {cane_sugar: 1, poop: 1, }
+  out: {sugar_cane: 1, }
+  time: 120
+-
+  inp: {cane_sugar: 1, garden: 1, }
+  out: {sugar_cane: 1, }
+  time: 90
+-
+  inp: {cane_sugar: 1, farm: 1, }
+  out: {sugar_cane: 1, }
+  time: 60
+-
+  inp: {cane_sugar: 1, greenhouse: 1, }
+  out: {sugar_cane: 1, }
+  time: 60
+-
+  inp: {wood: 2, stone: 1, villager: 1, }
+  out: {house: 1}
+  time: 30
+-
+  inp: {smelter: 1, wood: 1, iron_ore: 1, }
+  out: {iron_bar: 1}
+  time: 10
+-
+  inp: {wood: 3, stone: 1, villager: 1, }
+  out: {lumber_camp: 1}
+  time: 30
+-
+  inp: {brick: 1, plank: 1, coin: 3, villager: 1, }
+  out: {market: 1}
+  time: 30
+-
+  inp: {brick: 1, plank: 1, shell: 3, villager: 1, }
+  out: {market: 1}
+  time: 30
+-
+  inp: {milk: 1, berry: 1, }
+  out: {milkshake: 1}
+  time: 10
+-
+  inp: {flint: 2, wood: 1, stone: 1, villager: 1, }
+  out: {iron_mine: 1}
+  time: 30
+-
+  inp: {house: 1, villager: 2, }
+  out: {baby: 1}
+  time: 20
+-
+  inp: {house: 1, dog: 2, }
+  out: {dog: 1}
+  time: 60
+-
+  inp: {campfire: 1, egg: 2, }
+  out: {omelette: 1, }
+  time: 90
+-
+  inp: {stove: 1, egg: 2, }
+  out: {omelette: 1, }
+  time: 27
+-
+  inp: {wood: 3, villager: 1, }
+  out: {plank: 1}
+  time: 30
+-
+  inp: {stone: 3, wood: 1, villager: 1, }
+  out: {quarry: 1}
+  time: 30
+-
+  inp: {plank: 1, wood: 1, stone: 1, iron_bar: 1, villager: 1, }
+  out: {sawmill: 1}
+  time: 30
+-
+  inp: {wood: 1, stone: 1, stick: 1, villager: 1, }
+  out: {shed: 1}
+  time: 30
+-
+  inp: {flint: 2, brick: 2, plank: 1, villager: 1, }
+  out: {smelter: 1}
+  time: 30
+-
+  inp: {wood: 1, stick: 2, }
+  out: {spear: 1}
+  time: 15
+-
+  inp: {spear: 1, villager: 1, }
+  out: {militia: 1}
+  time: 10
+-
+  inp: {campfire: 1, potato: 1, raw_meat: 1, onion: 1, carrot: 1, }
+  out: {stew: 1, }
+  time: 120
+-
+  inp: {stove: 1, potato: 1, raw_meat: 1, onion: 1, carrot: 1, }
+  out: {stew: 1, }
+  time: 36
+-
+  inp: {brick: 1, iron_bar: 1, flint: 1, villager: 1, }
+  out: {stove: 1}
+  time: 30
+-
+  inp: {iron_bar: 1, stick: 2, }
+  out: {sword: 1}
+  time: 15
+-
+  inp: {sword: 1, villager: 1, }
+  out: {swordman: 1}
+  time: 10
+-
+  inp: {plank: 5, brick: 5, iron_bar: 3, villager: 3, }
+  out: {temple: 1}
+  time: 180
+-
+  inp: {stone: 1, iron_bar: 1, villager: 1, }
+  out: {warehouse: 1}
+  time: 30
+-
+  inp: {villager: 1, fish_rod: 1, }
+  out: {fisher: 1}
+  time: 10
+-
+  inp: {villager: 1, charcoal: 1, }
+  out: {}
+  time: 5
+-
+  inp: {empty_bottle: 1, spring: 1, }
+  out: {bottle_of_water: 1}
+  time: 10
+-
+  inp: {pirate: 1, parrot: 1, }
+  out: {friendly_pirate: 1}
+  time: 10
+-
+  inp: {treasure_map: 1, villager: 1, }
+  out: {sacred_chest: 1}
+  time: 120
+-
+  inp: {monkey: 1, banana: 1, }
+  out: {trained_monkey: 1}
+  time: 1
+-
+  inp: {glass: 2, iron_bar: 1, villager: 1, }
+  out: {aquarium: 1}
+  time: 30
+-
+  inp: {campfire: 1, glass: 2, }
+  out: {empty_bottle: 1, }
+  time: 10
+-
+  inp: {stove: 1, glass: 2, }
+  out: {empty_bottle: 1, }
+  time: 3
+-
+  inp: {gold_bar: 5, glass: 5, brick: 5, plank: 5, villager: 5, }
+  out: {cathedral: 1}
+  time: 180
+-
+  inp: {lime: 1, raw_fish: 1, }
+  out: {ceviche: 1}
+  time: 10
+-
+  inp: {campfire: 1, wood: 1, }
+  out: {charcoal: 1, }
+  time: 10
+-
+  inp: {stove: 1, wood: 1, }
+  out: {charcoal: 1, }
+  time: 3
+-
+  inp: {smelter: 1, gold_bar: 1, wood: 1, }
+  out: {coin: 1}
+  time: 10
+-
+  inp: {poop: 2, plank: 1, brick: 1, villager: 1, }
+  out: {composter: 1}
+  time: 30
+-
+  inp: {campfire: 1, raw_crab_meat: 1, }
+  out: {cooked_crab: 1, }
+  time: 60
+-
+  inp: {stove: 1, raw_crab_meat: 1, }
+  out: {cooked_crab: 1, }
+  time: 18
+-
+  inp: {campfire: 1, raw_fish: 1, }
+  out: {grilled_fish: 1, }
+  time: 60
+-
+  inp: {stove: 1, raw_fish: 1, }
+  out: {grilled_fish: 1, }
+  time: 18
+-
+  inp: {stove: 1, iron_bar: 1, plank: 1, villager: 1, }
+  out: {distillery: 1}
+  time: 30
+-
+  inp: {cotton: 4, villager: 1, }
+  out: {fabric: 1}
+  time: 10
+-
+  inp: {stick: 1, rope: 1, }
+  out: {fish_rod: 1}
+  time: 10
+-
+  inp: {fishing_spot: 1, stone: 1, rope: 1, }
+  out: {fish_trap: 1}
+  time: 30
+-
+  inp: {plank: 10, sail: 3, villager: 2, }
+  out: {frigate: 1}
+  time: 60
+-
+  inp: {smelter: 1, wood: 1, sand: 1, }
+  out: {glass: 1}
+  time: 10
+-
+  inp: {smelter: 1, wood: 1, gold_ore: 1, }
+  out: {gold_bar: 1}
+  time: 10
+-
+  inp: {flint: 1, gold_ore: 1, wood: 1, stone: 1, villager: 1, }
+  out: {gold_mine: 1}
+  time: 30
+-
+  inp: {iron_bar: 2, glass: 2, soil: 1, villager: 1, }
+  out: {greenhouse: 1}
+  time: 30
+-
+  inp: {iron_bar: 2, glass: 2, garden: 1, villager: 1, }
+  out: {greenhouse: 1}
+  time: 30
+-
+  inp: {iron_bar: 2, glass: 2, farm: 1, villager: 1, }
+  out: {greenhouse: 1}
+  time: 30
+-
+  inp: {plank: 1, iron_bar: 1, campfire: 1, }
+  out: {mess_hall: 1}
+  time: 30
+-
+  inp: {cotton: 2, villager: 1, }
+  out: {rope: 1}
+  time: 10
+-
+  inp: {plank: 1, iron_bar: 1, }
+  out: {rowboat: 1}
+  time: 30
+-
+  inp: {distillery: 1, cane_sugar: 1, bottle_of_water: 1, }
+  out: {bottle_of_rum: 1}
+  time: 10
+-
+  inp: {smelter: 1, gold_bar: 3, glass: 3, }
+  out: {sacred_key: 1}
+  time: 120
+-
+  inp: {fabric: 1, rope: 1, villager: 1, }
+  out: {sail: 1}
+  time: 10
+-
+  inp: {villager: 1, sand: 1, flint: 1, wood: 1, }
+  out: {sand_quarry: 1}
+  time: 30
+-
+  inp: {sand: 2, villager: 1, }
+  out: {sandstone: 1}
+  time: 5
+-
+  inp: {campfire: 1, raw_crab_meat: 1, raw_fish: 1, chili_pepper: 1, }
+  out: {seafood_stew: 1, }
+  time: 120
+-
+  inp: {stove: 1, raw_crab_meat: 1, raw_fish: 1, chili_pepper: 1, }
+  out: {seafood_stew: 1, }
+  time: 36
+-
+  inp: {shell: 1, wood: 2, }
+  out: {shell_chest: 1}
+  time: 10
+-
+  inp: {plank: 2, sail: 1, villager: 1, }
+  out: {sloop: 1}
+  time: 30
+-
+  inp: {raw_fish: 1, seaweed: 1, }
+  out: {sushi: 1}
+  time: 10
+-
+  inp: {omelette: 1, seaweed: 1, }
+  out: {tamago_sushi: 1}
+  time: 10
+
 # travelling_cart 1 item
 
 -
