@@ -60,25 +60,6 @@ class Cards(object):
     def _get_url_name(self, name: str) -> str:
         return name.lower().replace(' ', '_')
 
-
-@dataclass
-class Recipe:
-    inputs: Dict[str, int]
-    outputs: Dict[str, int]
-    time: int  # sec
-    place: str
-
-    def to_dict(self, cards: Cards) -> Dict:
-        return {
-            'inp': [cards.get_card(card) | {'count': count}
-                    for card, count in self.inputs.items()],
-            'out': [cards.get_card(card) | {'count': count}
-                    for card, count in self.outputs.items()],
-            'time': self.time,
-            'place': self.place
-        }
-
-
 class Recipes:
 
     def __init__(self, cards: Cards) -> None:
@@ -97,13 +78,9 @@ class Recipes:
                     self._fill_recipe_booster(booster, card, chance)
                     for card, chance in booster_out_yaml[booster].items()
                 )
-        with open('data/works.yaml', 'r') as file:
-            works_out_yaml: dict = YAML().load(file)
-            for factory in works_out_yaml:
-                recipes_yaml.extend(
-                    self._fill_recipe_work(factory, card)
-                    for card in works_out_yaml[factory]
-                )
+        with open('data/harvestable.yaml', 'r') as file:
+            harvestable_yaml: dict = YAML().load(file)
+            recipes_yaml.extend(self._fill_recipe_work(harvestable_yaml))
         return recipes_yaml
 
     def get_recipes(
@@ -130,7 +107,8 @@ class Recipes:
             'outputs': [self.cards.get_card(card) | {'count': count}
                         for card, count in recipe['out'].items()],
             'time': recipe['time'] if 'time' in recipe else None,
-            'chance': recipe['chance'] if 'chance' in recipe else None,
+            'chance': round(recipe['chance'] * 100)
+            if 'chance' in recipe else None,
         }
 
     def _fill_recipe_booster(
@@ -140,11 +118,19 @@ class Recipes:
         return {
             'inp': {booster: 1},
             'out': {card: 1},
-            'chance': round(chance*100),
+            'chance': chance,
         }
 
-    def _fill_recipe_work(self, factory: str, card: str) -> dict:
-        return {
-            'inp': {factory: 1, 'villager': 1},
-            'out': {card: 1}
-        }
+    def _fill_recipe_work(self,
+                          harvestable_yaml: Dict[str, Dict[str, Any]]) -> list:
+        recipes: List[Dict] = []
+        for harvestable, param in harvestable_yaml.items():
+            for card in param['cards']:
+                recipes.append({
+                    'inp': {harvestable: 1, 'villager': 1},
+                    'out': {card: 1},
+                    'chance': param['cards'][card],
+                    'time': param['time'],
+                })
+
+        return recipes

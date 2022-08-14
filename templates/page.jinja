@@ -18,8 +18,10 @@
     <div class="wrapper">
         <div class="container">
             <header>
-                <div class="page-header-icon"></div>
-                <div class="page-header-text">Stacklands recipices</div>
+                <a href="{{ url_for('home_page') }}"> 
+                    <div class="page-header-icon"></div>
+                    <div class="page-header-text">Stacklands recipices</div>
+                </a>
             </header>
             <main class="page-body ">
                 {% block content %}{% endblock %}

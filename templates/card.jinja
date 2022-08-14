@@ -40,11 +40,14 @@
         </div>
         {% endfor %}
 
-        {% if recepie['chance'] %}
         <div class="game-recepie-card">
+            {% if recepie['time'] %}
+            <div class="game-recepie-card-count black-card-count">{{recepie['time']}}s</div>
+            {%endif%}
+            {% if recepie['chance'] %}
             <div class="game-recepie-card-count black-card-count">{{recepie['chance']}}%</div>
+            {%endif%}
         </div>
-        {%endif%}
 
         </div>
     </div>
