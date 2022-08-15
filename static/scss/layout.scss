@@ -69,6 +69,8 @@
             .game-recepie-arrow {
                 margin-left: auto;
                 margin-right: auto;
+                display: flex;
+                align-items: center;
 
                 img {
                     width: $game-card-width * 0.7;
