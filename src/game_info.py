@@ -4,7 +4,7 @@ from typing import Any, Dict, Iterable, List
 
 from flask import url_for
 from ruamel.yaml import YAML
-
+from flask_frozen import relative_url_for
 from src.image_processing import prepare_image
 
 
@@ -23,14 +23,14 @@ class Cards(object):
 
     def get_card(self, name_key: str) -> Dict[str, Any]:
         card = self._cards[name_key].copy()
-        card['url'] = url_for('recipes', name=name_key)
+        card['url'] = relative_url_for('recipes', name=name_key)
         if 'image_name' in card:
             img_name = card.pop('image_name')
         else:
             img_name = name_key
-        card['png_url'] = url_for('static',
+        card['png_url'] = relative_url_for('static',
                                   filename=f'generate/img/{img_name}.png')
-        card['ico_url'] = url_for('static',
+        card['ico_url'] = relative_url_for('static',
                                   filename=f'generate/icon/{img_name}.ico')
         return card
 
