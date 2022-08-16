@@ -36,8 +36,9 @@ class Cards(object):
                 card['name_key'] = name_key
                 card['category'] = category_name
                 if category_name == 'Boosters':
+                    BOOSTER_SUFFIX = '_booster'
+                    prepare_image(card['image_name'], 'black', BOOSTER_SUFFIX)
                     card['image_name'] += '_booster'
-                    prepare_image(card['image_name'], 'black')
                     card['image_color'] = 'booster'
                 else:
                     card['image_name'] = name_key
