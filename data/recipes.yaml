@@ -589,6 +589,18 @@
   out: {tamago_sushi: 1}
   time: 10
 
+-
+  inp: {temple: 1, golden_goblet: 1}
+  out: {demon: 1}
+
+-
+  inp: {sacred_chest: 1, sacred_key: 1}
+  out: {island_relic: 1}
+
+-
+  inp: {island_relic: 1, cathedral: 1}
+  out: {demon_lord: 1}
+
 # travelling_cart 1 item
 
 -
