@@ -28,6 +28,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        position: relative;
 
         .game-card-icon {
             border-radius: 50%;
@@ -36,6 +37,68 @@
             width: $game-card-width * 0.7;
             height: $game-card-width * 0.7;
             padding: $margin-default;
+        }
+    }
+
+    .game-card-cost,
+    .game-card-food,
+    .game-card-health {
+        position: absolute;
+        bottom: $margin-default;
+        width: $margin-default * 4;
+        height: $margin-default * 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .game-card-cost {
+        left: $margin-default;
+        border-radius: 50%;
+    }
+
+    .game-card-health,
+    .game-card-food {
+        right: $margin-default;
+    }
+
+
+    .game-card-food {
+        border-radius: 10%;
+        width: $margin-default * 3;
+    }
+
+
+    .game-card-health {
+
+        $heart-width: 1.3rem;
+        $heart-radius: $heart-width * .5;
+
+        &>div {
+            z-index: 1;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: $heart-width;
+            height: 2rem;
+            background: $black;
+            border-radius: $heart-radius $heart-radius 0 0;
+        }
+
+        &::before {
+            left: 14px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        &::after {
+            left: -4px;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
         }
     }
 }
@@ -83,16 +146,29 @@
     }
 }
 
+
+
 @each $color in map-keys($map: $game-card-colors) {
 
     $color-map: map-get($map: $game-card-colors, $key: #{$color});
 
-    $text-color: map-get($map: $color-map, $key:'color');
+    $text-color: map-get($map: $color-map, $key: 'color');
 
+
+    .#{$color}-card-food,
+    .#{$color}-card-cost {
+        color: map-get($map: $color-map, $key: 'background');
+        border: 1px solid $text-color;
+        background: $text-color;
+    }
+
+    .#{$color}-card-health {
+        color: map-get($map: $color-map, $key: 'background');
+    }
 
     .#{$color}-card,
     .#{$color}-card-count {
-        background-color: map-get($map: $color-map, $key:'background');
+        background-color: map-get($map: $color-map, $key: 'background');
         color: $text-color;
     }
 
@@ -102,8 +178,8 @@
         }
 
         .game-card-icon {
-            background-color: map-get($map: $color-map, $key:'icon');
-            border-color: map-get($map: $color-map, $key:'icon');
+            background-color: map-get($map: $color-map, $key: 'icon');
+            border-color: map-get($map: $color-map, $key: 'icon');
         }
     }
 }

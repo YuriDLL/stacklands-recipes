@@ -7,6 +7,15 @@
         </div>
         <div class="game-card-body">
         <img class="game-card-icon" src="{{ card['ico_url'] }}">
+        {% if card['cost'] %}
+        <div class="game-card-cost {{ card['image_color'] }}-card-cost">{{ card['cost'] }}</div>
+        {% endif %}
+        {% if card['food'] %}
+        <div class="game-card-food {{ card['image_color'] }}-card-food">{{ card['food'] }}</div>
+        {% endif %}
+        {% if card['health'] %}
+        <div class="game-card-health {{ card['image_color'] }}-card-health"><div>{{ card['health'] }}</div></div>
+        {% endif %}
         </div>
     </a>
 </div>

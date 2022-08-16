@@ -4,17 +4,22 @@ from flask_assets import Environment, Bundle
 
 app = Flask(__name__)
 
-assets = Environment(app)
-assets.url = app.static_url_path
-scss = Bundle('scss/index.scss', filters='pyscss')
 
-css = Bundle(
-    scss,
-    filters='cssmin',
-    output='generate/index.css')
+def create_css():
+    assets = Environment(app)
+    assets.url = app.static_url_path
+    scss = Bundle('scss/index.scss', filters='pyscss')
 
-assets.register('css_all', css)
+    css = Bundle(
+        scss,
+        filters='cssmin',
+        output='generate/index.css')
 
+    assets.register('css_all', css)
+    css.build(force=True, disable_cache=True)
+
+
+create_css()
 cards = Cards()
 recipes_list = Recipes(cards)
 
