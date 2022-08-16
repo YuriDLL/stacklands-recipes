@@ -29,6 +29,15 @@
 
 }
 
+.game-recepie-card-count {
+    margin-top: $margin-default;
+    margin-bottom: $margin-default;
+    min-height: $game-card-height * 0.25;
+    width: $game-card-width;
+    font-size: 2rem;
+    text-align: center;
+    border: $game-card-border-width solid $game-card-border-color;
+}
 
 .game-recepie-group {
     margin-bottom: $margin-default * 2.2;
@@ -47,10 +56,14 @@
 
     .game-recepie-group-body {
         background-color: $game-group-card-body-background;
+
         .game-recepie-item {
             border: $game-group-card-border-width solid $game-group-card-border-color;
             display: flex;
 
+            @media (max-width: 500px) {
+                flex-direction: column;
+            }
 
             .game-recepie-output,
             .game-recepie-input {
@@ -62,8 +75,11 @@
                     margin: $margin-default * 2.2;
                 }
             }
+
             .game-recepie-output {
-                justify-content: flex-end;
+                @media (min-width: 500px) {
+                    justify-content: flex-end;
+                }
             }
 
             .game-recepie-arrow {
@@ -71,26 +87,35 @@
                 margin-right: auto;
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                @media (max-width: 500px) {
+                    flex-direction: row;
+
+                    .game-recepie-arrow-info {
+                        margin-left: $margin-default;
+                    }
+                }
+
 
                 img {
                     width: $game-card-width * 0.7;
                     height: $game-card-width * 0.7;
+
+                    @media (max-width: 500px) {
+                        transform: rotate(90deg);
+                    }
                 }
+
+
             }
 
             .game-recepie-card {
                 padding: 0;
                 position: relative;
 
-                .game-recepie-card-count {
-                    margin-top: $margin-default;
-                    margin-bottom: $margin-default;
-                    min-height: $game-card-height * 0.25;
-                    width: $game-card-width;
-                    font-size: 2rem;
-                    text-align: center;
-                    border: $game-card-border-width solid $game-card-border-color;
-                }
+
             }
         }
 

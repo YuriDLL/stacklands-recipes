@@ -22,7 +22,13 @@ body {
         letter-spacing: -1px;
 
         display: inline-block;
+
+
         padding: 1rem 5rem;
+        @media (max-width: 450px)
+        {
+            padding: 1rem 0rem;
+        }
 
         border: $game-group-card-border-width solid $game-group-card-border-color;
         border-bottom: $game-group-card-border-width * 3 solid $game-group-card-border-color;

@@ -2,20 +2,23 @@
 
 <div class="game-card {{ card['image_color'] }}-card">
     <a href="{{ url_for('recipes', name=card['name_key']) }}">
-        <div class="game-card-header"> 
-        <div>{{ card['name'] }}</div>
+        <div class="game-card-header">
+            <div>{{ card['name'] }}</div>
         </div>
         <div class="game-card-body">
-        <img class="game-card-icon" src="{{ url_for('static', filename='generate/icon/'+card['image_name']+'.ico') }}">
-        {% if card['cost'] %}
-        <div class="game-card-cost {{ card['image_color'] }}-card-cost">{{ card['cost'] }}</div>
-        {% endif %}
-        {% if card['food'] %}
-        <div class="game-card-food {{ card['image_color'] }}-card-food">{{ card['food'] }}</div>
-        {% endif %}
-        {% if card['health'] %}
-        <div class="game-card-health {{ card['image_color'] }}-card-health"><div>{{ card['health'] }}</div></div>
-        {% endif %}
+            <img class="game-card-icon"
+                src="{{ url_for('static', filename='generate/icon/'+card['image_name']+'.ico') }}">
+            {% if card['cost'] %}
+            <div class="game-card-cost {{ card['image_color'] }}-card-cost">{{ card['cost'] }}</div>
+            {% endif %}
+            {% if card['food'] %}
+            <div class="game-card-food {{ card['image_color'] }}-card-food">{{ card['food'] }}</div>
+            {% endif %}
+            {% if card['health'] %}
+            <div class="game-card-health {{ card['image_color'] }}-card-health">
+                <div>{{ card['health'] }}</div>
+            </div>
+            {% endif %}
         </div>
     </a>
 </div>
@@ -26,8 +29,8 @@
 {% macro recipes_table(recipes) -%}
 
 {% for recepie in recipes %}
-    <div class="game-recepie-item">
-        <div class="game-recepie-input">
+<div class="game-recepie-item">
+    <div class="game-recepie-input">
 
         {% for c in recepie['inputs'] %}
         <div class="game-recepie-card">
@@ -36,11 +39,21 @@
         </div>
         {% endfor %}
 
-        </div>
-        <div class="game-recepie-arrow">
+    </div>
+    <div class="game-recepie-arrow">
         <img src={{ url_for('static', filename='img/arrow.png' ) }}>
+        <div class="game-recepie-arrow-info">
+            {% if recepie['time'] %}
+            <div class="game-recepie-card-count black-card-count">{{recepie['time']}}s</div>
+            {%endif%}
+            {% if recepie['chance'] %}
+            <div class="game-recepie-card-count black-card-count">{{recepie['chance']}}%</div>
+            {%endif%}
         </div>
-        <div class="game-recepie-output">
+
+
+    </div>
+    <div class="game-recepie-output">
 
         {% for c in recepie['outputs'] %}
         <div class="game-recepie-card">
@@ -50,16 +63,11 @@
         {% endfor %}
 
         <div class="game-recepie-card">
-            {% if recepie['time'] %}
-            <div class="game-recepie-card-count black-card-count">{{recepie['time']}}s</div>
-            {%endif%}
-            {% if recepie['chance'] %}
-            <div class="game-recepie-card-count black-card-count">{{recepie['chance']}}%</div>
-            {%endif%}
-        </div>
 
         </div>
+
     </div>
+</div>
 {% endfor %}
 
 {%- endmacro %}
