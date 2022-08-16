@@ -2,9 +2,7 @@ import csv
 from functools import cached_property
 from typing import Any, Dict, Iterable, List
 
-from flask import url_for
 from ruamel.yaml import YAML
-from flask_frozen import relative_url_for
 from src.image_processing import prepare_image
 
 
@@ -22,17 +20,7 @@ class Cards(object):
         return cards
 
     def get_card(self, name_key: str) -> Dict[str, Any]:
-        card = self._cards[name_key].copy()
-        card['url'] = relative_url_for('recipes', name=name_key)
-        if 'image_name' in card:
-            img_name = card.pop('image_name')
-        else:
-            img_name = name_key
-        card['png_url'] = relative_url_for('static',
-                                  filename=f'generate/img/{img_name}.png')
-        card['ico_url'] = relative_url_for('static',
-                                  filename=f'generate/icon/{img_name}.ico')
-        return card
+        return self._cards[name_key]
 
     def iterate(self) -> Iterable[Dict[str, Any]]:
         return (self.get_card(key_name) for key_name in self._cards.keys())
@@ -45,15 +33,16 @@ class Cards(object):
             resources = csv.DictReader(csv_file)
             for card in resources:
                 name_key = self._get_url_name(card['name'])
-                cards[name_key] = card
-                cards[name_key]['category'] = category_name
-                if 'image_name' in card:
-                    BOOSTER_SUFFIX = '_booster'
-                    prepare_image(card['image_name'], 'black', BOOSTER_SUFFIX)
-                    card['image_name'] += BOOSTER_SUFFIX
+                card['name_key'] = name_key
+                card['category'] = category_name
+                if category_name == 'Boosters':
+                    card['image_name'] += '_booster'
+                    prepare_image(card['image_name'], 'black')
                     card['image_color'] = 'booster'
                 else:
+                    card['image_name'] = name_key
                     prepare_image(name_key, card['image_color'])
+                cards[name_key] = card
         return cards
 
     def _get_url_name(self, name: str) -> str:

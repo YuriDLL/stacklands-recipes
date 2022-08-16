@@ -1,12 +1,12 @@
 {% macro card(card) -%}
 
 <div class="game-card {{ card['image_color'] }}-card">
-    <a href="{{ card['url'] }}">
+    <a href="{{ url_for('recipes', name=card['name_key']) }}">
         <div class="game-card-header"> 
         <div>{{ card['name'] }}</div>
         </div>
         <div class="game-card-body">
-        <img class="game-card-icon" src="{{ card['ico_url'] }}">
+        <img class="game-card-icon" src="{{ url_for('static', filename='generate/icon/'+card['image_name']+'.ico') }}">
         {% if card['cost'] %}
         <div class="game-card-cost {{ card['image_color'] }}-card-cost">{{ card['cost'] }}</div>
         {% endif %}
