@@ -605,88 +605,257 @@
 
 -
   inp: {travelling_cart: 1, coin: 5}
-  out: {map: 1}
--
-  inp: {travelling_cart: 1, coin: 5}
   out: {bone: 1}
+  chance: 0.08333334
 -
   inp: {travelling_cart: 1, coin: 5}
-  out: {frittata: 1}
+  out: {iron_bar: 1}
+  chance: 0.08333334
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {spear: 1}
+  chance: 0.08333334
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {apple: 1}
+  chance: 0.08333334
 -
   inp: {travelling_cart: 1, coin: 5}
   out: {soil: 1}
--
-  inp: {travelling_cart: 1, coin: 5}
-  out: {plank: 1}
--
-  inp: {travelling_cart: 1, coin: 5}
-  out: {brick: 1}
--
-  inp: {travelling_cart: 1, coin: 5}
-  out: {old_tome: 1}
--
-  inp: {travelling_cart: 1, coin: 5}
-  out: {golden_goblet: 1}
--
-  inp: {travelling_cart: 1, coin: 5}
-  out: {treasure_chest: 1}
+  chance: 0.08333334
 -
   inp: {travelling_cart: 1, coin: 5}
   out: {key: 1}
+  chance: 0.08333334
 -
   inp: {travelling_cart: 1, coin: 5}
-  out: {apple: 1}
+  out: {treasure_chest: 1}
+  chance: 0.08333334
 -
   inp: {travelling_cart: 1, coin: 5}
-  out: {spear: 1}
+  out: {frittata: 1}
+  chance: 0.08333334
 -
   inp: {travelling_cart: 1, coin: 5}
-  out: {iron_bar: 1}
+  out: {brick: 1}
+  chance: 0.08333334
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {plank: 1}
+  chance: 0.08333334
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {map: 1}
+  chance: 0.08333334
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {old_tome: 1}
+  chance: 0.08333334
+-
+  inp: {travelling_cart: 1, coin: 5}
+  out: {golden_goblet: 1}
+  comment: 'after 5'
 
 # treasure_chest 3 item
 
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {carrot: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {map: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {iron_bar: 1}
+
 -
   inp: {treasure_chest: 1, key: 1}
   out: {apple: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {onion: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {milk: 1}
+  chance: 0.03125
 -
   inp: {treasure_chest: 1, key: 1}
   out: {berry: 1}
+  chance: 0.03125
 -
   inp: {treasure_chest: 1, key: 1}
-  out: {brick: 1}
+  out: {carrot: 1}
+  chance: 0.03125
 -
   inp: {treasure_chest: 1, key: 1}
-  out: {coin: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {spear: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {stone: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {stick: 1}
--
-  inp: {treasure_chest: 1, key: 1}
-  out: {flint: 1}
+  out: {cooked_meat: 1}
+  chance: 0.03125
 -
   inp: {treasure_chest: 1, key: 1}
   out: {egg: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {frittata: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {fruit_salad: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {milk: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {milkshake: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {mushroom: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {omelette: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {onion: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {potato: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {raw_meat: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {stew: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {corpse: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {bone: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {brick: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {flint: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {coin: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {iron_bar: 1}
+  chance: 0.03125
 -
   inp: {treasure_chest: 1, key: 1}
   out: {iron_ore: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {key: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {map: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {plank: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {poop: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {spear: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {stick: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {stone: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {sword: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {wood: 1}
+  chance: 0.03125
+-
+  inp: {treasure_chest: 1, key: 1}
+  out: {old_tome: 1}
+  chance: 0.03125
+
+
+-
+  inp: {catacombs: 1, villager: 1}
+  out: {golden_goblet: 1}
+  comment: 'every 4th'
+  time: 60
+-
+  inp: {cave: 1, villager: 1}
+  out: {treasure_map: 1}
+  comment: 'every 4th'
+  time: 60
+-
+  inp: {sawmill: 1, wood: 2}
+  out: {plank: 1}
+  time: 10
+-
+  inp: {brickyard: 1, stone: 2}
+  out: {brick: 1}
+  time: 10
+-
+  inp: {composter: 1, berry: 5}
+  out: {soil: 1}
+  time: 60
+-
+  inp: {crab: 1}
+  out: {momma_crab: 1}
+  comment: 'every 3th'
+-
+  inp: {chicken: 1}
+  out: {egg: 1}
+  time: 90
+-
+  inp: {cow: 1}
+  out: {milk: 1}
+  time: 90
+-
+  inp: {rabbit: 1}
+  out: {poop: 1}
+  time: 90
+-
+  inp: {monkey: 1}
+  out: {poop: 1}
+  time: 90
+-
+  inp: {parrot: 1}
+  out: {berry: 1}
+  time: 120
+-
+  inp: {fish_trap: 1, berry: 1}
+  out: {cod: 1}
+  time: 30
+-
+  inp: {fish_trap: 1, banana: 1}
+  out: {eel: 1}
+  time: 30
+-
+  inp: {fish_trap: 1, raw_meat: 1}
+  out: {shark: 1}
+  time: 30
+-
+  inp: {fish_trap: 1, lime: 1}
+  out: {tuna: 1}
+  time: 30
+-
+  inp: {fish_trap: 1, berry: 1}
+  out: {cod: 1}
+  time: 30
+-
+  inp: {fish_trap: 1, raw_fish: 1}
+  out: {mackerel: 1}
+  time: 30

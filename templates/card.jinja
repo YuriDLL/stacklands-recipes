@@ -32,7 +32,7 @@
 <div class="game-recepie-item">
     <div class="game-recepie-input">
 
-        {% for c in recepie['inputs'] %}
+        {% for c in recepie['inp'] %}
         <div class="game-recepie-card">
             {{ card(c) }}
             <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>
@@ -49,13 +49,16 @@
             {% if recepie['chance'] %}
             <div class="game-recepie-card-count black-card-count">{{recepie['chance']}}%</div>
             {%endif%}
+            {% if recepie['comment'] %}
+            <div class="game-recepie-card-count black-card-count">{{recepie['comment']}}</div>
+            {%endif%}
         </div>
 
 
     </div>
     <div class="game-recepie-output">
 
-        {% for c in recepie['outputs'] %}
+        {% for c in recepie['out'] %}
         <div class="game-recepie-card">
             {{ card(c) }}
             <div class="game-recepie-card-count {{ c['image_color'] }}-card-count">x{{c['count']}}</div>

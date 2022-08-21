@@ -89,15 +89,14 @@ class Recipes:
         return recipes
 
     def _fill_recipe_cards(self, recipe: dict) -> dict:
-        return {
-            'inputs': [self.cards.get_card(card) | {'count': count}
-                       for card, count in recipe['inp'].items()],
-            'outputs': [self.cards.get_card(card) | {'count': count}
-                        for card, count in recipe['out'].items()],
-            'time': recipe['time'] if 'time' in recipe else None,
-            'chance': round(recipe['chance'] * 100)
-            if 'chance' in recipe else None,
-        }
+        result = recipe.copy()
+        result['inp'] = [self.cards.get_card(card) | {'count': count}
+                         for card, count in recipe['inp'].items()]
+        result['out'] = [self.cards.get_card(card) | {'count': count}
+                         for card, count in recipe['out'].items()]
+        if 'chance' in result:
+            result['chance'] = round(result['chance'] * 100)
+        return result
 
     def _fill_drops_recipe(self, drops_yaml) -> list:
         result = []

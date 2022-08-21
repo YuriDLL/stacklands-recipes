@@ -103,7 +103,6 @@ cave:
     snake: 0.1428571
     bear: 0.1428571
     crab: 0.1428571
-    treasure_map: 0
   time: 60
 jungle:
   cards:
@@ -151,3 +150,24 @@ sugar_cane:
   cards:
     cane_sugar: 1
   time: 10
+lumber_camp:
+  cards:
+    wood: 1
+  time: 15
+iron_mine:
+  cards:
+    iron_ore: 0.3333333
+    stone: 0.3333333
+    coin: 0.3333333
+  time: 45
+quarry:
+  cards:
+    stone: 0.875
+    flint: 0.125
+  time: 15
+gold_mine:
+  cards:
+    gold_ore: 0.3333333
+    stone: 0.3333333
+    coin: 0.3333333
+  time: 45
