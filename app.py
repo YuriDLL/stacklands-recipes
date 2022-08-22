@@ -40,7 +40,7 @@ def home_page():
 def recipes(name=None):
     return render_template(
         'card_templ.jinja',
-        card=cards.get_card(name),
+        main_card=cards.get_card(name),
         create_recipes=recipes_list.get_recipes(output=name),
         use_recipes=recipes_list.get_recipes(input=name)
     )

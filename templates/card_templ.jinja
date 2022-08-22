@@ -2,7 +2,8 @@
 
 {% from 'card.jinja' import card, recipes_table%}
 
-{% block title %}Staclands recipices{% endblock %}
+{% block title %}Staclands {{main_card['name']}} card{% endblock %}
+{% block description %}Card "{{main_card['name']}}" create from {{create_recipes|length}} recipes and use in {{use_recipes|length}} recipes{% endblock %}
 
 {% block content %}
 <div>

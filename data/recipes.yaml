@@ -859,3 +859,6 @@
   inp: {fish_trap: 1, raw_fish: 1}
   out: {mackerel: 1}
   time: 30
+-
+  inp: {wolf: 1, bone: 1}
+  out: {dog: 1}
