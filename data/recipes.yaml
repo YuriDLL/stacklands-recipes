@@ -595,7 +595,7 @@
 
 -
   inp: {sacred_chest: 1, sacred_key: 1}
-  out: {island_relic: 1}
+  out: {island_relic: 1, tentacle: 5}
 
 -
   inp: {island_relic: 1, cathedral: 1}
@@ -862,3 +862,58 @@
 -
   inp: {wolf: 1, bone: 1}
   out: {dog: 1}
+-
+  inp: {pirate_boat: 1}
+  out: {pirate: 1}
+  time: 20
+-
+  inp: {pirate_boat: 1, coin: 10}
+  out: {}
+-
+  inp: {}
+  out: {pirate_boat: 1}
+  comment: 'every 7 moon'
+-
+  inp: {}
+  out: {travelling_cart: 1}
+  chance: 0.1
+  comment: 'after 7 moon'
+-
+  inp: {}
+  out: {strange_portal: 1}
+  comment: 'every 6 moon'
+-
+  inp: {strange_portal: 1}
+  out: {rat: 1}
+  chance: 0.5
+  comment: 'after 6 moon'
+-
+  inp: {strange_portal: 1}
+  out: {goblin: 1}
+  chance: 0.5
+  comment: 'after 6 moon'
+-
+  inp: {strange_portal: 1}
+  out: {giant_rat: 1}
+  chance: 0.25
+  comment: 'after 20 moon'
+-
+  inp: {strange_portal: 1}
+  out: {skeleton: 1}
+  chance: 0.25
+  comment: 'after 20 moon'
+-
+  inp: {strange_portal: 1}
+  out: {slime: 3}
+  chance: 0.25
+  comment: 'after 20 moon'
+-
+  inp: {strange_portal: 1}
+  out: {wolf: 1}
+  chance: 0.25
+  comment: 'after 20 moon'
+-
+  inp: {strange_portal: 1}
+  out: {bear: 1}
+  chance: 0.25
+  comment: 'after 24 moon'
