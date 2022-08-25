@@ -9,24 +9,23 @@
 <div>
   <div>
 
-    {% if create_recipes %}
     <div class="game-recepie-group">
-      <div class="game-recepie-group-name">Create form</div>
+      <div class="game-recepie-group-name">Create from</div>
+      {% if create_recipes %}
       <div class="game-recepie-group-body">
         {{recipes_table(create_recipes)}}
       </div>
+      {% endif %}
     </div>
-    {% endif %}
 
-
-    {% if use_recipes %}
     <div class="game-recepie-group">
       <div class="game-recepie-group-name">Use for</div>
+      {% if use_recipes %}
       <div class="game-recepie-group-body">
         {{recipes_table(use_recipes)}}
       </div>
+      {% endif %}
     </div>
-    {% endif %}
   </div>
 </div>
 {% endblock %}
