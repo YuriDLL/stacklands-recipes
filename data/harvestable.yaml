@@ -6,6 +6,7 @@ catacombs:
     slime: 0.2
     treasure_chest: 0.1
     giant_rat: 0.1
+    golden_goblet: 0
   time: 60
 forest:
   cards:
